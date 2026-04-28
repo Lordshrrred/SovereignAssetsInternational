@@ -13,7 +13,7 @@ const services = [
   { label: 'Mercury Remediation', href: '/technology#pillar-A' },
   { label: 'Soil Regeneration', href: '/technology#pillar-D' },
   { label: 'Water Infrastructure', href: '/technology#pillar-B' },
-  { label: 'Land Regeneration', href: '/technology#pillar-D' },
+  { label: 'Aquifer Protection', href: '/technology#pillar-E' },
   { label: 'Subsurface Intelligence', href: '/technology#pillar-C' },
   { label: 'Hydrogeological Infrastructure', href: '/technology#pillar-E' },
 ]

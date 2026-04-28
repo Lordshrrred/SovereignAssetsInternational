@@ -66,12 +66,11 @@ const advisors = [
   },
 ]
 
-// TODO: replace with real data
 const credentials = [
-  { value: '20+', label: 'Years of Field Experience', sub: 'Across active ASGM regions' },
-  { value: '4', label: 'Countries Deployed', sub: 'Pilot sites active' },
-  { value: '5', label: 'Institutional Partners', sub: 'Research and standards bodies' },
-  { value: '2024', label: 'Platform Launch', sub: 'Global deployment underway' },
+  { value: '20+', label: 'Years in Development', sub: 'Field-tested across active ASGM regions' },
+  { value: '2026', label: 'Pilot Launch', sub: 'Costa Rica ~ Phase 1' },
+  { value: '5', label: 'Integrated Pillars', sub: 'One deployable platform' },
+  { value: '4', label: 'Strategic Partners', sub: 'Research, standards and field bodies' },
 ]
 
 export default function AboutPage() {

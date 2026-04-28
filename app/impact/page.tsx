@@ -8,51 +8,49 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 }
 
-// TODO: replace with real data
 const envImpacts = [
   {
     metric: '500 kg+',
-    label: 'Mercury Removed',
-    desc: 'Captured and permanently immobilized from active mining environments, preventing entry into watersheds.',
+    label: 'Mercury Capture Target ~ Phase 1',
+    desc: 'Target volume for hermetic capture and permanent immobilization during the Costa Rica pilot deployment.',
   },
   {
     metric: '12',
-    label: 'Aquifers Protected',
-    desc: 'Primary water sources mapped, monitored, and secured against contamination from surface activities.',
+    label: 'Aquifer Systems Targeted',
+    desc: 'Mapped pre-deployment. Primary water sources identified for protection through Pillar C subsurface intelligence.',
   },
   {
     metric: '800 ha',
-    label: 'Land Under Remediation',
-    desc: 'Hectares of mine tailings in active molecular treatment, transitioning to agricultural substrate.',
+    label: 'Remediation Target',
+    desc: 'Phase 1 tailings footprint identified for molecular stabilization and transition to agricultural substrate.',
   },
   {
     metric: '0',
     label: 'Mercury Release Events',
-    desc: 'Zero reportable mercury spill or volatilization events at SAI-operated containment sites.',
+    desc: 'Design specification. Zero-release engineering target across all SAI hermetic containment deployments.',
   },
 ]
 
-// TODO: replace with real data
 const socialImpacts = [
   {
     metric: '12',
-    label: 'Communities Served',
-    desc: 'Villages receiving clean water infrastructure through Pillar B and E deployments.',
+    label: 'Communities in Phase 1 Zone',
+    desc: 'Villages within the Costa Rica pilot region identified as direct water infrastructure beneficiaries.',
   },
   {
     metric: '340+',
-    label: 'Jobs Created',
-    desc: 'Direct employment in remediation operations and community infrastructure maintenance.',
+    label: 'Jobs Targeted',
+    desc: 'Direct employment projection across remediation, operations, and community maintenance by Phase 3.',
   },
   {
-    metric: '28,000',
-    label: 'People with Water Access',
-    desc: 'Individuals connected to SAI-installed potable water systems in mining-affected regions.',
+    metric: '28,000+',
+    label: 'People in Target Communities',
+    desc: 'Phase 1 beneficiary population across the pilot region ~ water access, land restoration, and health outcomes.',
   },
   {
     metric: '100%',
     label: 'Community Ownership',
-    desc: 'All water infrastructure assets legally transferred to community ownership at project handover.',
+    desc: 'Platform commitment. Non-negotiable design principle ~ all water infrastructure transfers to community ownership at handover.',
   },
 ]
 

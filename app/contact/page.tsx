@@ -19,14 +19,9 @@ const inquiryTypes = [
 
 const contactInfo = [
   {
-    label: 'General Inquiries',
-    value: 'info@sovereignassets.com',
-    type: 'email',
-  },
-  {
-    label: 'Investor Relations',
-    value: 'invest@sovereignassets.com',
-    type: 'email',
+    label: 'Response Time',
+    value: 'Inquiries responded to within 2 business days.',
+    type: 'text',
   },
   {
     label: 'Entity',
