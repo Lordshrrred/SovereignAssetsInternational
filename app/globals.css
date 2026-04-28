@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy text-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-gold text-navy font-semibold rounded-sm
+           hover:bg-gold-light transition-all duration-200 text-sm tracking-wide uppercase;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold font-semibold rounded-sm
+           hover:bg-gold hover:text-navy transition-all duration-200 text-sm tracking-wide uppercase;
+  }
+
+  .btn-teal {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-teal text-navy font-semibold rounded-sm
+           hover:bg-teal-light transition-all duration-200 text-sm tracking-wide uppercase;
+  }
+
+  .btn-outline-teal {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-teal text-teal font-semibold rounded-sm
+           hover:bg-teal hover:text-navy transition-all duration-200 text-sm tracking-wide uppercase;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-teal mb-4;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight;
+  }
+
+  .card {
+    @apply bg-navy-card border border-navy-border rounded-sm p-6 md:p-8;
+  }
+
+  .gold-line {
+    @apply w-12 h-0.5 bg-gold my-6;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-gray-300 hover:text-gold transition-colors duration-200 tracking-wide uppercase;
+  }
+
+  .pillar-letter {
+    @apply text-5xl font-display font-bold text-gold opacity-20 absolute top-4 right-4 leading-none;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #C9A84C 0%, #E2C46E 50%, #C9A84C 100%);
+  }
+
+  .text-gradient-teal {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #00A882 0%, #00D4AA 100%);
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(135deg, #C9A84C, #00D4AA) 1;
+  }
+}

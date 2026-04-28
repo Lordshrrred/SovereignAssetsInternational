@@ -1,0 +1,278 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 28 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } },
+}
+
+const stagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12 } },
+}
+
+// TODO: replace with real data
+const stats = [
+  { value: '500kg+', label: 'Mercury Captured', sub: 'Across pilot deployments' },
+  { value: '12', label: 'Communities Served', sub: 'Direct beneficiaries' },
+  { value: '4', label: 'Countries Deployed', sub: 'Africa · South America · SE Asia' },
+]
+
+const pillars = [
+  {
+    letter: 'A',
+    title: 'Mercury Capture',
+    desc: 'Proprietary hermetic containment systems achieving >99% capture efficiency ~ eliminating the primary toxin in artisanal mining environments and protecting watersheds for generations.',
+    color: 'text-gold',
+    border: 'border-gold/20',
+  },
+  {
+    letter: 'B',
+    title: 'Community Water Infrastructure',
+    desc: 'Solar-powered pumping systems, distribution networks, and village-scale storage delivering potable water to communities of 200-5,000 people with 20+ year operational lifespans.',
+    color: 'text-teal',
+    border: 'border-teal/20',
+  },
+  {
+    letter: 'C',
+    title: 'Subsurface Intelligence',
+    desc: 'Hyper-Spectral Plasma Detection fused with satellite imagery and AI ~ 3D environmental mapping to 50m depth for aquifer identification and contamination plume assessment.',
+    color: 'text-teal',
+    border: 'border-teal/20',
+  },
+  {
+    letter: 'D',
+    title: 'Trident System',
+    desc: 'Molecular stabilization technology that transforms toxic mine tailings into fertile agricultural substrate ~ reclaiming land and livelihoods for mining-affected communities.',
+    color: 'text-gold',
+    border: 'border-gold/20',
+  },
+  {
+    letter: 'E',
+    title: 'Hydrogeological Infrastructure',
+    desc: 'Precision aquifer mapping, source protection protocols, and basin-wide hydrological monitoring ~ defending primary water systems from surface contamination.',
+    color: 'text-gold',
+    border: 'border-gold/20',
+  },
+]
+
+const partners = [
+  { name: 'Aquatron USA', role: 'Water Technology' },
+  { name: 'Artisanal Gold Council', role: 'Field Standards' },
+  { name: 'University of Florida', role: 'Research Partner' },
+  { name: 'Trident Agriculture Solutions', role: 'Land Regeneration' },
+]
+
+export default function Home() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-navy" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(0,212,170,0.08),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_80%,rgba(201,168,76,0.06),transparent)]" />
+
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
+            backgroundSize: '80px 80px',
+          }}
+        />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
+          <motion.div variants={stagger} initial="hidden" animate="show" className="space-y-8">
+            <motion.p variants={fadeUp} className="section-label">
+              Global Environmental Remediation Platform
+            </motion.p>
+
+            <motion.h1
+              variants={fadeUp}
+              className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight max-w-5xl mx-auto"
+            >
+              Transforming Environmental{' '}
+              <span className="text-gradient-gold">Liabilities</span> Into{' '}
+              <span className="text-gradient-teal">Sovereign Assets</span>
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp}
+              className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            >
+              SAI deploys a five-pillar technology platform ~ mercury remediation, community water
+              infrastructure, subsurface intelligence, land regeneration, and aquifer protection ~
+              in mining-affected communities across Africa, South America, and Southeast Asia.
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+            >
+              <Link href="/contact" className="btn-gold">
+                Partner With Us
+              </Link>
+              <Link href="/technology" className="btn-outline">
+                Explore the Platform
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1 }}
+            className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          >
+            <span className="text-gray-600 text-xs tracking-widest uppercase">Scroll</span>
+            <div className="w-px h-12 bg-gradient-to-b from-gray-600 to-transparent" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats strip */}
+      <section className="bg-navy-mid border-y border-navy-border py-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-0 sm:divide-x divide-navy-border">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center px-8">
+                {/* TODO: replace with real data */}
+                <p className="text-4xl md:text-5xl font-display font-bold text-gradient-gold mb-2">
+                  {stat.value}
+                </p>
+                <p className="text-white font-semibold text-sm uppercase tracking-wider mb-1">
+                  {stat.label}
+                </p>
+                <p className="text-gray-500 text-xs">{stat.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5 Pillars */}
+      <section className="py-24 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <p className="section-label">The SAI Architecture</p>
+            <h2 className="section-heading max-w-2xl">
+              Five Pillars. One Integrated Platform.
+            </h2>
+            <div className="gold-line" />
+            <p className="text-gray-400 max-w-2xl leading-relaxed">
+              Each pillar is independently deployable and collectively self-reinforcing ~ mercury
+              capture protects the water, water infrastructure sustains the community, and soil
+              restoration returns the land.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {pillars.map((pillar, i) => (
+              <motion.div
+                key={pillar.letter}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className={`card relative border ${pillar.border} overflow-hidden group hover:border-opacity-60 transition-all duration-300`}
+              >
+                <span className={`pillar-letter ${pillar.color}`}>{pillar.letter}</span>
+                <p className={`text-xs font-bold tracking-[0.2em] uppercase mb-3 ${pillar.color}`}>
+                  Pillar {pillar.letter}
+                </p>
+                <h3 className="text-xl font-display font-bold text-white mb-4">{pillar.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{pillar.desc}</p>
+              </motion.div>
+            ))}
+
+            {/* CTA card */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="card border border-teal/30 bg-gradient-to-br from-navy-card to-navy-mid flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-teal text-xs font-bold tracking-[0.2em] uppercase mb-3">
+                  Full Architecture
+                </p>
+                <h3 className="text-xl font-display font-bold text-white mb-4">
+                  Explore the Complete Platform
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Deep-dive into the physics, deployment methodology, and verified performance
+                  data behind every pillar.
+                </p>
+              </div>
+              <Link href="/technology" className="btn-teal mt-8 self-start text-xs">
+                View Technology
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="py-16 bg-navy-mid border-y border-navy-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center section-label mb-10">Institutional Partners</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {partners.map((p) => (
+              <div
+                key={p.name}
+                className="flex flex-col items-center text-center py-4 px-6 border border-navy-border rounded-sm hover:border-gold/30 transition-colors group"
+              >
+                <div className="w-10 h-10 rounded-full bg-navy-border mb-3 flex items-center justify-center">
+                  <span className="text-gold font-bold text-sm">{p.name[0]}</span>
+                </div>
+                <p className="text-white text-sm font-semibold group-hover:text-gold transition-colors">
+                  {p.name}
+                </p>
+                <p className="text-gray-500 text-xs mt-1">{p.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-28 bg-navy relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(0,212,170,0.05),transparent)]" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="section-label">Get Involved</p>
+            <h2 className="section-heading mb-6">
+              Ready to turn a liability into an asset?
+            </h2>
+            <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+              Whether you represent a government body, impact fund, grant institution, or
+              mining-affected community ~ there is a role for you in the SAI platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/funding" className="btn-gold">
+                Investor Inquiry
+              </Link>
+              <Link href="/funding" className="btn-outline-teal">
+                Grant Partnership
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </>
+  )
+}
