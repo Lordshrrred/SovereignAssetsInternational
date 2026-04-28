@@ -26,6 +26,7 @@ const pillars = [
     desc: 'Proprietary hermetic containment systems achieving >99% capture efficiency ~ eliminating the primary toxin in artisanal mining environments and protecting watersheds for generations.',
     color: 'text-gold',
     border: 'border-gold/20',
+    href: '/technology#pillar-A',
   },
   {
     letter: 'B',
@@ -33,6 +34,7 @@ const pillars = [
     desc: 'Solar-powered pumping systems, distribution networks, and village-scale storage delivering potable water to communities of 200-5,000 people with 20+ year operational lifespans.',
     color: 'text-teal',
     border: 'border-teal/20',
+    href: '/technology#pillar-B',
   },
   {
     letter: 'C',
@@ -40,6 +42,7 @@ const pillars = [
     desc: 'Hyper-Spectral Plasma Detection fused with satellite imagery and AI ~ 3D environmental mapping to 50m depth for aquifer identification and contamination plume assessment.',
     color: 'text-teal',
     border: 'border-teal/20',
+    href: '/technology#pillar-C',
   },
   {
     letter: 'D',
@@ -47,6 +50,7 @@ const pillars = [
     desc: 'Molecular stabilization technology that transforms toxic mine tailings into fertile agricultural substrate ~ reclaiming land and livelihoods for mining-affected communities.',
     color: 'text-gold',
     border: 'border-gold/20',
+    href: '/technology#pillar-D',
   },
   {
     letter: 'E',
@@ -54,6 +58,7 @@ const pillars = [
     desc: 'Precision aquifer mapping, source protection protocols, and basin-wide hydrological monitoring ~ defending primary water systems from surface contamination.',
     color: 'text-gold',
     border: 'border-gold/20',
+    href: '/technology#pillar-E',
   },
 ]
 
@@ -181,14 +186,23 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`card relative border ${pillar.border} overflow-hidden group hover:border-opacity-60 transition-all duration-300`}
+                whileHover={{ y: -4 }}
               >
-                <span className={`pillar-letter ${pillar.color}`}>{pillar.letter}</span>
-                <p className={`text-xs font-bold tracking-[0.2em] uppercase mb-3 ${pillar.color}`}>
-                  Pillar {pillar.letter}
-                </p>
-                <h3 className="text-xl font-display font-bold text-white mb-4">{pillar.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{pillar.desc}</p>
+                <Link
+                  href={pillar.href}
+                  className={`card relative border ${pillar.border} overflow-hidden group flex flex-col h-full
+                    hover:border-teal/60 hover:shadow-[0_0_20px_rgba(0,212,170,0.08)]
+                    transition-all duration-300 cursor-pointer`}
+                >
+                  <span className={`pillar-letter ${pillar.color}`}>{pillar.letter}</span>
+                  <p className={`text-xs font-bold tracking-[0.2em] uppercase mb-3 ${pillar.color}`}>
+                    Pillar {pillar.letter}
+                  </p>
+                  <h3 className="text-xl font-display font-bold text-white mb-4 group-hover:text-teal transition-colors duration-200">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{pillar.desc}</p>
+                </Link>
               </motion.div>
             ))}
 
@@ -198,22 +212,29 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="card border border-teal/30 bg-gradient-to-br from-navy-card to-navy-mid flex flex-col justify-between"
+              whileHover={{ y: -4 }}
             >
-              <div>
-                <p className="text-teal text-xs font-bold tracking-[0.2em] uppercase mb-3">
-                  Full Architecture
-                </p>
-                <h3 className="text-xl font-display font-bold text-white mb-4">
-                  Explore the Complete Platform
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Deep-dive into the physics, deployment methodology, and verified performance
-                  data behind every pillar.
-                </p>
-              </div>
-              <Link href="/technology" className="btn-teal mt-8 self-start text-xs">
-                View Technology
+              <Link
+                href="/technology"
+                className="card border border-teal/30 bg-gradient-to-br from-navy-card to-navy-mid flex flex-col justify-between h-full
+                  hover:border-teal/60 hover:shadow-[0_0_20px_rgba(0,212,170,0.08)]
+                  transition-all duration-300 cursor-pointer group"
+              >
+                <div>
+                  <p className="text-teal text-xs font-bold tracking-[0.2em] uppercase mb-3">
+                    Full Architecture
+                  </p>
+                  <h3 className="text-xl font-display font-bold text-white mb-4 group-hover:text-teal transition-colors duration-200">
+                    Explore the Complete Platform
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    Deep-dive into the physics, deployment methodology, and verified performance
+                    data behind every pillar.
+                  </p>
+                </div>
+                <span className="btn-teal mt-8 self-start text-xs">
+                  View Technology
+                </span>
               </Link>
             </motion.div>
           </div>
