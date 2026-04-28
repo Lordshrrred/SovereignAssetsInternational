@@ -156,7 +156,7 @@ export default function ImpactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-navy relative overflow-hidden">
+      <section className="pt-44 pb-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-20%,rgba(0,212,170,0.07),transparent)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" animate="show" variants={fadeUp} className="max-w-3xl">

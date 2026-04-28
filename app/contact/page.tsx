@@ -69,7 +69,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-navy relative overflow-hidden">
+      <section className="pt-44 pb-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-20%,rgba(201,168,76,0.06),transparent)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" animate="show" variants={fadeUp} className="max-w-3xl">
@@ -311,7 +311,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-400 text-lg font-display italic mb-2">
-              "Roots in the Earth. Capital in the Future."
+              "From Liability to Legacy."
             </p>
             <p className="text-gray-600 text-sm">Sovereign Assets International ~ GeoNano R&D LLC</p>
           </div>

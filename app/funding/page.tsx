@@ -112,7 +112,7 @@ export default function FundingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-navy relative overflow-hidden">
+      <section className="pt-44 pb-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-20%,rgba(0,212,170,0.07),transparent)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" animate="show" variants={fadeUp} className="max-w-3xl">
@@ -127,6 +127,64 @@ export default function FundingPage() {
               serves the mandates of multilateral environmental funds while creating land assets,
               carbon credit pathways, and environmental services revenue that sustain the platform.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why SAI Qualifies */}
+      <section className="py-16 bg-navy-mid border-b border-navy-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start"
+          >
+            <div>
+              <p className="section-label">Grant Eligibility</p>
+              <h2 className="text-3xl font-display font-bold text-white mb-4">
+                Why SAI Qualifies
+              </h2>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Five structural reasons SAI meets the criteria of the world's largest
+                environmental and development grant frameworks.
+              </p>
+            </div>
+            <ul className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                {
+                  title: 'Minamata Convention on Mercury',
+                  detail: 'Direct alignment with UN treaty obligations on ASGM mercury reduction',
+                },
+                {
+                  title: 'GEF Eligibility',
+                  detail: 'Measurable, verifiable environmental outcomes across land, water, and atmosphere',
+                },
+                {
+                  title: 'Self-Financing Model',
+                  detail: 'Reduces grant risk ~ platform sustains itself after initial deployment capital',
+                },
+                {
+                  title: 'Community Water Infrastructure',
+                  detail: 'Provides the social license and community benefit required by multilateral funders',
+                },
+                {
+                  title: 'Multi-Country Scalability',
+                  detail: 'Phase 2 and 3 architecture built in ~ grants unlock regional and global replication',
+                },
+              ].map((item) => (
+                <li key={item.title} className="flex gap-3 items-start">
+                  <span className="flex-none mt-1 w-5 h-5 rounded-full border border-teal/40 bg-teal/10 flex items-center justify-center">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal" />
+                  </span>
+                  <div>
+                    <p className="text-white text-sm font-semibold">{item.title}</p>
+                    <p className="text-gray-500 text-xs mt-0.5 leading-relaxed">{item.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
       </section>

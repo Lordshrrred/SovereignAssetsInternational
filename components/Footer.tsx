@@ -35,7 +35,7 @@ export default function Footer() {
               remediation, resource recovery, and community infrastructure.
             </p>
             <p className="text-gold font-display text-lg italic">
-              "Roots in the Earth. Capital in the Future."
+              "From Liability to Legacy."
             </p>
             <p className="text-gray-600 text-xs mt-4 uppercase tracking-wider">
               GeoNano R&D LLC

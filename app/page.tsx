@@ -13,11 +13,10 @@ const stagger = {
   show: { transition: { staggerChildren: 0.12 } },
 }
 
-// TODO: replace with real data
 const stats = [
-  { value: '500kg+', label: 'Mercury Captured', sub: 'Across pilot deployments' },
-  { value: '12', label: 'Communities Served', sub: 'Direct beneficiaries' },
-  { value: '4', label: 'Countries Deployed', sub: 'Africa · South America · SE Asia' },
+  { value: 'Phase 1', label: 'Pilot Deployment', sub: 'Costa Rica 2026' },
+  { value: '3', label: 'Strategic Partners', sub: 'Scientific + Field + Engineering' },
+  { value: 'Minamata', label: 'Convention Aligned', sub: 'UN Mercury Treaty Compliant' },
 ]
 
 const pillars = [
@@ -60,7 +59,7 @@ const pillars = [
 
 const partners = [
   { name: 'Aquatron USA', role: 'Water Technology' },
-  { name: 'Artisanal Gold Council', role: 'Field Standards' },
+  { name: 'Artisanal Mining Council', role: 'Mercury Reduction & Field Standards' },
   { name: 'University of Florida', role: 'Research Partner' },
   { name: 'Trident Agriculture Solutions', role: 'Land Regeneration' },
 ]
@@ -83,7 +82,7 @@ export default function Home() {
           }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-44 pb-32">
           <motion.div variants={stagger} initial="hidden" animate="show" className="space-y-8">
             <motion.p variants={fadeUp} className="section-label">
               Global Environmental Remediation Platform

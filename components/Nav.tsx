@@ -34,6 +34,15 @@ export default function Nav() {
         scrolled ? 'bg-navy/95 backdrop-blur-md border-b border-navy-border' : 'bg-transparent'
       }`}
     >
+      {/* Announcement bar */}
+      <div className="bg-teal/10 border-b border-teal/20 text-center py-2 px-4">
+        <p className="text-teal text-xs font-medium tracking-wide">
+          Phase 1 Pilot &nbsp;~&nbsp; Costa Rica 2026 &nbsp;~&nbsp;{' '}
+          <a href="/funding" className="underline underline-offset-2 hover:text-teal-light transition-colors">
+            Now Seeking Grant Partners
+          </a>
+        </p>
+      </div>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
