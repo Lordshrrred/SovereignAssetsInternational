@@ -14,9 +14,9 @@ const stagger = {
 }
 
 const stats = [
-  { value: 'Phase 1', label: 'Pilot Deployment', sub: 'Costa Rica 2026' },
-  { value: '3', label: 'Strategic Partners', sub: 'Scientific + Field + Engineering' },
+  { value: '2026', label: 'Pilot Launch', sub: 'Costa Rica ~ Phase 1' },
   { value: 'Minamata', label: 'Convention Aligned', sub: 'UN Mercury Treaty Compliant' },
+  { value: '5', label: 'Integrated Pillars', sub: 'One deployable platform' },
 ]
 
 const pillars = [

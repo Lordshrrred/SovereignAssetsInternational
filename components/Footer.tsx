@@ -10,11 +10,12 @@ const navLinks = [
 ]
 
 const services = [
-  'Mercury Remediation',
-  'Soil Regeneration',
-  'Water Infrastructure',
-  'Land Regeneration',
-  'Subsurface Intelligence',
+  { label: 'Mercury Remediation', href: '/technology#pillar-A' },
+  { label: 'Soil Regeneration', href: '/technology#pillar-D' },
+  { label: 'Water Infrastructure', href: '/technology#pillar-B' },
+  { label: 'Land Regeneration', href: '/technology#pillar-D' },
+  { label: 'Subsurface Intelligence', href: '/technology#pillar-C' },
+  { label: 'Hydrogeological Infrastructure', href: '/technology#pillar-E' },
 ]
 
 export default function Footer() {
@@ -68,8 +69,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {services.map((s) => (
-                <li key={s} className="text-sm text-gray-400">
-                  {s}
+                <li key={s.href + s.label}>
+                  <Link
+                    href={s.href}
+                    className="text-sm text-gray-400 hover:text-gold transition-colors"
+                  >
+                    {s.label}
+                  </Link>
                 </li>
               ))}
             </ul>
