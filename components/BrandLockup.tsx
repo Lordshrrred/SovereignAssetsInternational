@@ -10,7 +10,7 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
   return (
     <div
       className={`group/brand flex items-center ${
-        isFooter ? 'gap-4' : 'gap-3'
+        isFooter ? 'gap-4' : 'gap-3.5'
       }`}
       aria-label="Global Mercury Recovery and Water Security"
     >
@@ -37,15 +37,15 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
           alt=""
           width={3200}
           height={455}
-          className={`object-contain object-left opacity-95 ${
-            isFooter ? 'h-8 w-auto' : 'h-[1.55rem] w-auto'
+          className={`object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)] ${
+            isFooter ? 'h-10 w-auto' : 'h-8 w-auto'
           }`}
           priority={!isFooter}
           aria-hidden="true"
         />
         <div
-          className={`mt-1.5 font-sans font-semibold uppercase leading-tight tracking-[0.18em] text-gray-300 ${
-            isFooter ? 'text-[0.62rem]' : 'hidden text-[0.58rem] sm:block'
+          className={`mt-1.5 font-sans font-semibold uppercase leading-tight tracking-[0.2em] text-white/75 ${
+            isFooter ? 'text-[0.68rem]' : 'hidden text-[0.62rem] sm:block'
           }`}
         >
           Mercury Recovery
