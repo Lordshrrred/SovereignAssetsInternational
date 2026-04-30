@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 195" role="img" aria-label="GLOBAL">
+  <style>
+    .letters { font: 500 160px 'Avenir Next Condensed', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 22px; }
+  </style>
+  <text class="letters" x="0" y="153" fill="#000000">GLOB</text>
+  <g transform="translate(770 8) scale(0.92)">
+    <path fill="#000000" fill-rule="evenodd" d="M88 10 168 155 140 149 88 48 36 149 8 155 88 10Zm0 55 39 76-21-6-18-36-18 36-21 6 39-76Z"/>
+    <path fill="#000000" d="M14 154c31-24 72-30 119-10 17 7 31 10 42 6-20 18-61 19-102 4-25-9-44-9-59 0Z"/>
+  </g>
+  <text class="letters" x="1035" y="153" fill="#000000">L</text>
+</svg>
