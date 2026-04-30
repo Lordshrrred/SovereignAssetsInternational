@@ -114,7 +114,7 @@ export default function Home() {
             >
               Transforming Environmental{' '}
               <span className="text-gradient-gold">Liabilities</span> Into{' '}
-              <span className="text-gradient-teal">Sovereign Assets</span>
+              <span className="text-gradient-teal">Recoverable Value</span>
             </motion.h1>
 
             <motion.p

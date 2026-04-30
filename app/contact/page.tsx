@@ -51,7 +51,7 @@ export default function ContactPage() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nOrganization: ${formData.organization}\nEmail: ${formData.email}\nCountry: ${formData.country}\nInquiry Type: ${inquiryLabel}\n\nMessage:\n${formData.message}`
     )
-    window.location.href = `mailto:info@sovereignassets.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@globalmercuryrecovery.com?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
 

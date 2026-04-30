@@ -30,7 +30,7 @@ export default function Footer() {
               <BrandLockup context="footer" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
-              Transforming environmental liabilities into sovereign assets through science-driven
+              Transforming environmental liabilities into lasting community value through science-driven
               remediation, resource recovery, and community infrastructure.
             </p>
             <p className="text-gold font-display text-lg italic">

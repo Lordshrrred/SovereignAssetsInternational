@@ -99,7 +99,7 @@ export default function FundingPage() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nOrganization: ${formData.organization}\nRole: ${formData.role}\nCountry: ${formData.country}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`
     )
-    window.location.href = `mailto:info@sovereignassets.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@globalmercuryrecovery.com?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
 

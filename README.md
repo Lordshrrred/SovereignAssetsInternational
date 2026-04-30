@@ -1,6 +1,6 @@
-# Sovereign Assets International ~ Website
+# Global Mercury Recovery ~ Website
 
-Marketing and platform site for **Sovereign Assets International (SAI)**, built on Next.js 14 with Tailwind CSS and Framer Motion.
+Marketing and platform site for **Global Mercury Recovery & Water Security (GMRWS)**, built on Next.js 14 with Tailwind CSS and Framer Motion.
 
 Legal entity: **GeoNano R&D LLC**
 
@@ -87,7 +87,7 @@ Before going live:
 - [ ] Replace all `// TODO: replace with real data` stat values
 - [ ] Replace `[Team Member]` placeholders with real names and bios
 - [ ] Replace `[Advisory Member]` placeholders
-- [ ] Update `mailto:info@sovereignassets.com` with real contact email
+- [ ] Update `mailto:info@globalmercuryrecovery.com` with real contact email
 - [ ] Add real logo/favicon to `/public/`
 - [ ] Add Open Graph images to `/public/` and update `metadata` in `app/layout.tsx`
 - [ ] Replace the interactive map placeholder in `/impact` with a real map component
@@ -107,4 +107,4 @@ Before going live:
 
 ---
 
-*Built for Sovereign Assets International. GeoNano R&D LLC.*
+*Built for Global Mercury Recovery & Water Security. GeoNano R&D LLC.*

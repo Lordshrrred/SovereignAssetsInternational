@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /Users/matt/Repos/SovereignAssetsInternational && git add -A && git diff --cached --quiet || (git commit -m \"auto: update site\" && git push origin main && vercel --prod --yes)",
+            "command": "git add -A && git diff --cached --quiet || (git commit -m \"auto: update site\" && git push origin main && vercel --prod --yes)",
             "timeout": 180,
             "statusMessage": "Deploying to Vercel..."
           }
