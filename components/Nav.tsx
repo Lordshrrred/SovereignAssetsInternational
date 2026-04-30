@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -45,16 +46,24 @@ export default function Nav() {
       </div>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex items-center">
-            <span className="text-2xl font-display font-bold text-gold group-hover:text-gold-light transition-colors">
-              GMRWS
-            </span>
-            <div className="w-px h-6 bg-navy-border mx-3" />
-            <span className="text-xs font-medium tracking-[0.15em] uppercase text-gray-400 group-hover:text-gray-300 transition-colors hidden sm:block">
-              Global Mercury Removal & Water Security
-            </span>
-          </div>
+        <Link href="/" className="flex items-center group">
+          {/* Mobile: icon only */}
+          <Image
+            src="/brand/icon-white.png"
+            alt="Global Mercury Recovery & Water Security"
+            width={40}
+            height={40}
+            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity sm:hidden"
+          />
+          {/* Desktop: horizontal logo */}
+          <Image
+            src="/brand/logo-horizontal-white.png"
+            alt="Global Mercury Recovery & Water Security"
+            width={320}
+            height={56}
+            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity hidden sm:block"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}

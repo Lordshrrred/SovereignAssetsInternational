@@ -5,19 +5,28 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Global Mercury Removal & Water Security | Environmental Remediation & Resource Recovery',
+    default: 'Global Mercury Recovery & Water Security | Environmental Remediation',
     template: '%s | GMRWS',
   },
   description:
-    'Global Mercury Removal & Water Security deploys a five-pillar platform for mercury remediation, primary water detection, soil regeneration, and village water infrastructure.',
+    'Global Mercury Recovery & Water Security deploys a five-pillar platform for mercury remediation, primary water detection, soil regeneration, and village water infrastructure.',
   keywords: [
     'mercury remediation',
     'soil regeneration',
     'environmental remediation',
     'water infrastructure',
     'artisanal mining',
-    'soil regeneration',
+    'water security',
   ],
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+    ],
+    apple: { url: '/favicon-180x180.png', sizes: '180x180', type: 'image/png' },
+    shortcut: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({

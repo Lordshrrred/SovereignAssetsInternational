@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const navLinks = [
@@ -25,11 +26,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-baseline gap-2 mb-4">
-              <span className="text-3xl font-display font-bold text-gold">GMRWS</span>
-              <span className="text-xs font-medium tracking-[0.15em] uppercase text-gray-500">
-                Global Mercury Removal & Water Security
-              </span>
+            <div className="mb-6">
+              <Image
+                src="/brand/logo-horizontal-white.png"
+                alt="Global Mercury Recovery & Water Security"
+                width={340}
+                height={60}
+                className="h-11 w-auto opacity-90"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
               Transforming environmental liabilities into sovereign assets through science-driven

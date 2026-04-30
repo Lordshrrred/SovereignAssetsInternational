@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
@@ -89,6 +90,20 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-44 pb-32">
           <motion.div variants={stagger} initial="hidden" animate="show" className="space-y-8">
+            <motion.div variants={fadeUp} className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-2xl scale-150" />
+                <Image
+                  src="/brand/icon-white.png"
+                  alt="Global Mercury Recovery & Water Security"
+                  width={96}
+                  height={96}
+                  className="relative h-20 w-auto opacity-90"
+                  priority
+                />
+              </div>
+            </motion.div>
+
             <motion.p variants={fadeUp} className="section-label">
               Global Environmental Remediation Platform
             </motion.p>
