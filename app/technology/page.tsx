@@ -15,7 +15,7 @@ const pillars = [
     tagline: 'Eliminate the Primary Toxin',
     accent: 'gold',
     body: [
-      'SAI deploys proprietary hermetic containment systems specifically engineered for the chaotic conditions of artisanal and small-scale gold mining (ASGM) environments.',
+      'GMRWS deploys proprietary hermetic containment systems specifically engineered for the chaotic conditions of artisanal and small-scale gold mining (ASGM) environments.',
       'Our closed-loop mercury circuit achieves greater than 99% capture efficiency ~ preventing volatilization into the atmosphere and leaching into waterways that has devastated communities for generations.',
       'The system is modular, field-deployable in under 72 hours, and requires no grid power ~ making it viable in remote extraction zones where conventional remediation equipment cannot reach.',
     ],
@@ -34,9 +34,9 @@ const pillars = [
     tagline: 'Clean Water as a Sovereign Right',
     accent: 'teal',
     body: [
-      'SAI designs and installs solar-powered village water systems engineered from the ground up for community ownership. Every component is selected for repairability in the field, using locally available materials where possible.',
+      'GMRWS designs and installs solar-powered village water systems engineered from the ground up for community ownership. Every component is selected for repairability in the field, using locally available materials where possible.',
       'Distribution networks, storage systems, and point-of-use infrastructure are sized for communities of 200-5,000 people and designed for 20+ year operational lifespans ~ not donor project cycles.',
-      'Community operators are trained and certified before handover. Water governance structures ~ user committees, tariff management, and maintenance funds ~ are established alongside the physical infrastructure, ensuring the system works long after SAI personnel have left.',
+      'Community operators are trained and certified before handover. Water governance structures ~ user committees, tariff management, and maintenance funds ~ are established alongside the physical infrastructure, ensuring the system works long after GMRWS personnel have left.',
     ],
     specs: [
       { label: 'Community Scale', value: '200-5,000 people' },
@@ -53,7 +53,7 @@ const pillars = [
     tagline: 'See What Others Cannot',
     accent: 'teal',
     body: [
-      'SAI\'s Hyper-Spectral Plasma Detection technology fuses ground-based geophysical sensing with satellite multispectral imagery and AI-driven pattern recognition to generate 3D subsurface models to 50 meters depth.',
+      'GMRWS\'s Hyper-Spectral Plasma Detection technology fuses ground-based geophysical sensing with satellite multispectral imagery and AI-driven pattern recognition to generate 3D subsurface models to 50 meters depth.',
       'This approach identifies aquifer structures, contamination plumes, fault lines, and mineral concentrations with resolution and confidence levels that conventional exploratory drilling cannot match at comparable cost.',
       'For environmental remediation, this means contamination can be traced to its source, aquifer boundaries can be defined before drilling begins, and remediation resources can be targeted precisely ~ eliminating the guesswork that makes conventional programs expensive and incomplete.',
     ],
@@ -91,8 +91,8 @@ const pillars = [
     tagline: 'Defend Primary Water Sources',
     accent: 'gold',
     body: [
-      'SAI\'s subsurface mapping capability (Pillar C) identifies primary water sources ~ deep aquifer systems recharged by geological processes rather than surface precipitation ~ that are immune to the surface contamination affecting shallow community wells.',
-      'Once identified, SAI designs source protection zones, installs monitoring well networks, and establishes baseline contamination data that enables ongoing aquifer health tracking and early detection of new contamination events.',
+      'GMRWS\'s subsurface mapping capability (Pillar C) identifies primary water sources ~ deep aquifer systems recharged by geological processes rather than surface precipitation ~ that are immune to the surface contamination affecting shallow community wells.',
+      'Once identified, GMRWS designs source protection zones, installs monitoring well networks, and establishes baseline contamination data that enables ongoing aquifer health tracking and early detection of new contamination events.',
       'Hydrogeological infrastructure integrates with Pillar B water delivery systems to create a complete water security solution: the source is mapped and protected, the delivery system is community-owned, and the monitoring data feeds regulatory compliance reporting for Minamata Convention and national environmental agency requirements.',
     ],
     specs: [
@@ -158,7 +158,7 @@ export default function TechnologyPage() {
             </h1>
             <div className="gold-line" />
             <p className="text-gray-400 text-lg leading-relaxed">
-              SAI's integrated platform addresses the full lifecycle of mining-affected land ~
+              GMRWS's integrated platform addresses the full lifecycle of mining-affected land ~
               from toxic liability to clean, water-secure, agriculturally productive community
               asset. Each pillar is independently deployable; together they form a complete
               environmental remediation system.
@@ -300,7 +300,7 @@ export default function TechnologyPage() {
             <p className="section-label">Competitive Differentiation</p>
             <h2 className="section-heading mb-4">Physics vs. Mechanics</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Traditional remediation firms contain and monitor contamination. SAI eliminates it
+              Traditional remediation firms contain and monitor contamination. GMRWS eliminates it
               ~ using molecular-level chemistry and precision geophysical intelligence rather than
               mechanical management alone.
             </p>
@@ -314,7 +314,7 @@ export default function TechnologyPage() {
                     Capability
                   </th>
                   <th className="text-left py-4 px-4 text-teal text-xs uppercase tracking-wider font-medium w-1/3">
-                    SAI Platform
+                    GMRWS Platform
                   </th>
                   <th className="text-left py-4 px-4 text-gray-500 text-xs uppercase tracking-wider font-medium w-1/3">
                     Traditional Firms
@@ -349,7 +349,7 @@ export default function TechnologyPage() {
             Ready to deploy the platform?
           </h2>
           <p className="text-gray-400 mb-8">
-            Contact SAI to discuss a pilot deployment, technology partnership, or site
+            Contact GMRWS to discuss a pilot deployment, technology partnership, or site
             assessment for your region.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

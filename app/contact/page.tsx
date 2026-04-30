@@ -46,7 +46,7 @@ export default function ContactPage() {
     const inquiryLabel =
       inquiryTypes.find((t) => t.value === formData.inquiryType)?.label ?? formData.inquiryType
     const subject = encodeURIComponent(
-      `SAI Contact ~ ${inquiryLabel} ~ ${formData.organization || formData.name}`
+      `GMRWS Contact ~ ${inquiryLabel} ~ ${formData.organization || formData.name}`
     )
     const body = encodeURIComponent(
       `Name: ${formData.name}\nOrganization: ${formData.organization}\nEmail: ${formData.email}\nCountry: ${formData.country}\nInquiry Type: ${inquiryLabel}\n\nMessage:\n${formData.message}`
@@ -308,7 +308,7 @@ export default function ContactPage() {
             <p className="text-gray-400 text-lg font-display italic mb-2">
               "From Liability to Legacy."
             </p>
-            <p className="text-gray-600 text-sm">Sovereign Assets International ~ GeoNano R&D LLC</p>
+            <p className="text-gray-600 text-sm">Global Mercury Removal & Water Security ~ GeoNano R&D LLC</p>
           </div>
         </div>
       </section>

@@ -5,11 +5,11 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sovereign Assets International | Environmental Remediation & Resource Recovery',
-    template: '%s | SAI',
+    default: 'Global Mercury Removal & Water Security | Environmental Remediation & Resource Recovery',
+    template: '%s | GMRWS',
   },
   description:
-    'Transforming environmental liabilities into sovereign assets through mercury remediation, primary water detection, soil regeneration, and village water infrastructure.',
+    'Global Mercury Removal & Water Security deploys a five-pillar platform for mercury remediation, primary water detection, soil regeneration, and village water infrastructure.',
   keywords: [
     'mercury remediation',
     'soil regeneration',

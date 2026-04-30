@@ -27,7 +27,7 @@ const envImpacts = [
   {
     metric: '0',
     label: 'Mercury Release Events',
-    desc: 'Design specification. Zero-release engineering target across all SAI hermetic containment deployments.',
+    desc: 'Design specification. Zero-release engineering target across all GMRWS hermetic containment deployments.',
   },
 ]
 
@@ -64,7 +64,7 @@ const developmentImpacts = [
   {
     metric: '60%',
     label: 'Compliance Cost Reduction',
-    desc: 'Average reduction in regulatory liability costs for mining operators partnering with SAI.',
+    desc: 'Average reduction in regulatory liability costs for mining operators partnering with GMRWS.',
   },
   {
     metric: 'SDGs 3, 6, 13, 15',
@@ -74,7 +74,7 @@ const developmentImpacts = [
   {
     metric: 'Minamata',
     label: 'Treaty Compliance',
-    desc: 'Every SAI deployment generates Article 8 ASGM National Action Plan-compatible reporting data.',
+    desc: 'Every GMRWS deployment generates Article 8 ASGM National Action Plan-compatible reporting data.',
   },
 ]
 
@@ -117,7 +117,7 @@ const phases = [
     title: 'Phase 3 ~ Global Platform',
     scope: '100+ sites, multi-continent',
     duration: '48-120 months',
-    desc: 'Operate as a licensed environmental remediation platform, enabling sovereign governments, mining operators, and development institutions to deploy the SAI stack under license and technical supervision.',
+    desc: 'Operate as a licensed environmental remediation platform, enabling sovereign governments, mining operators, and development institutions to deploy the GMRWS stack under license and technical supervision.',
     outcomes: [
       'Platform licensed in 15+ countries',
       'Sovereign environmental fund structures operational',
@@ -164,7 +164,7 @@ export default function ImpactPage() {
             </h1>
             <div className="gold-line" />
             <p className="text-gray-400 text-lg leading-relaxed">
-              Impact is not a narrative at SAI ~ it is an engineering specification. Every pillar
+              Impact is not a narrative at GMRWS ~ it is an engineering specification. Every pillar
               is designed to a measurable outcome, and every deployment generates verifiable data
               for environmental, social, and development finance stakeholders.
             </p>
@@ -449,7 +449,7 @@ export default function ImpactPage() {
             Align your capital with verified outcomes
           </h2>
           <p className="text-gray-400 mb-8">
-            SAI provides third-party verifiable environmental and social metrics ~ a requirement
+            GMRWS provides third-party verifiable environmental and social metrics ~ a requirement
             for GEF, World Bank, and Green Climate Fund grant compliance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

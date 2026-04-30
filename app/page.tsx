@@ -106,7 +106,7 @@ export default function Home() {
               variants={fadeUp}
               className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
             >
-              SAI deploys a five-pillar technology platform ~ mercury remediation, community water
+              GMRWS deploys a five-pillar technology platform ~ mercury remediation, community water
               infrastructure, subsurface intelligence, land regeneration, and aquifer protection ~
               in mining-affected communities across Africa, South America, and Southeast Asia.
             </motion.p>
@@ -166,7 +166,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <p className="section-label">The SAI Architecture</p>
+            <p className="section-label">The GMRWS Architecture</p>
             <h2 className="section-heading max-w-2xl">
               Five Pillars. One Integrated Platform.
             </h2>
@@ -280,7 +280,7 @@ export default function Home() {
             </h2>
             <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
               Whether you represent a government body, impact fund, grant institution, or
-              mining-affected community ~ there is a role for you in the SAI platform.
+              mining-affected community ~ there is a role for you in the GMRWS platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/funding" className="btn-gold">

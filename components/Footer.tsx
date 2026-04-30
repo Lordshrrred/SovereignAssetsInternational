@@ -26,9 +26,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-baseline gap-2 mb-4">
-              <span className="text-3xl font-display font-bold text-gold">SAI</span>
+              <span className="text-3xl font-display font-bold text-gold">GMRWS</span>
               <span className="text-xs font-medium tracking-[0.15em] uppercase text-gray-500">
-                Sovereign Assets International
+                Global Mercury Removal & Water Security
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">

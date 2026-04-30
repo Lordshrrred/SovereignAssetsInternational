@@ -24,25 +24,25 @@ const funders = [
   {
     name: 'Green Climate Fund',
     abbrev: 'GCF',
-    desc: 'GCF climate adaptation funding covers solar water infrastructure and soil carbon sequestration through SAI\'s land regeneration program.',
+    desc: 'GCF climate adaptation funding covers solar water infrastructure and soil carbon sequestration through GMRWS\'s land regeneration program.',
     fit: ['Climate Adaptation', 'Carbon Sequestration', 'Water Security'],
   },
   {
     name: 'Inter-American Development Bank',
     abbrev: 'IADB',
-    desc: 'IDB Invest impact investment facilities target mercury-affected Amazon and Andean communities ~ a core SAI deployment region.',
+    desc: 'IDB Invest impact investment facilities target mercury-affected Amazon and Andean communities ~ a core GMRWS deployment region.',
     fit: ['Amazon Mercury', 'Indigenous Rights', 'Environmental Justice'],
   },
   {
     name: 'African Development Bank',
     abbrev: 'AfDB',
-    desc: 'AfDB\'s Desert to Power and ASGM formalization programming in West Africa creates direct co-financing opportunities for SAI pilots.',
+    desc: 'AfDB\'s Desert to Power and ASGM formalization programming in West Africa creates direct co-financing opportunities for GMRWS pilots.',
     fit: ['ASGM Reform', 'Rural Water', 'Economic Formalization'],
   },
   {
     name: 'Minamata Convention',
     abbrev: 'MC',
-    desc: 'As a signatory framework, the Minamata Convention creates mandatory compliance pathways that SAI technology uniquely satisfies at commercial scale.',
+    desc: 'As a signatory framework, the Minamata Convention creates mandatory compliance pathways that GMRWS technology uniquely satisfies at commercial scale.',
     fit: ['Mercury Treaty', 'ASGM Phase-Down', 'National Action Plans'],
   },
 ]
@@ -71,7 +71,7 @@ const qualifications = [
   {
     icon: '◎',
     title: 'Treaty Compliance Integration',
-    desc: 'SAI deployments generate Minamata Convention Article 8 ASGM National Action Plan-compatible reporting data by default.',
+    desc: 'GMRWS deployments generate Minamata Convention Article 8 ASGM National Action Plan-compatible reporting data by default.',
   },
   {
     icon: '◎',
@@ -94,7 +94,7 @@ export default function FundingPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const subject = encodeURIComponent(
-      `SAI Funding Inquiry ~ ${formData.inquiryType === 'grant' ? 'Grant Partnership' : 'Investor Inquiry'} ~ ${formData.organization}`
+      `GMRWS Funding Inquiry ~ ${formData.inquiryType === 'grant' ? 'Grant Partnership' : 'Investor Inquiry'} ~ ${formData.organization}`
     )
     const body = encodeURIComponent(
       `Name: ${formData.name}\nOrganization: ${formData.organization}\nRole: ${formData.role}\nCountry: ${formData.country}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`
@@ -122,7 +122,7 @@ export default function FundingPage() {
             </h1>
             <div className="gold-line" />
             <p className="text-gray-400 text-lg leading-relaxed">
-              SAI is designed to be grant-eligible, impact-investable, and commercially
+              GMRWS is designed to be grant-eligible, impact-investable, and commercially
               self-sustaining ~ not as a compromise, but as a structural feature. The platform
               serves the mandates of multilateral environmental funds while creating land assets,
               carbon credit pathways, and environmental services revenue that sustain the platform.
@@ -131,7 +131,7 @@ export default function FundingPage() {
         </div>
       </section>
 
-      {/* Why SAI Qualifies */}
+      {/* Why GMRWS Qualifies */}
       <section className="py-16 bg-navy-mid border-b border-navy-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -144,10 +144,10 @@ export default function FundingPage() {
             <div>
               <p className="section-label">Grant Eligibility</p>
               <h2 className="text-3xl font-display font-bold text-white mb-4">
-                Why SAI Qualifies
+                Why GMRWS Qualifies
               </h2>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Five structural reasons SAI meets the criteria of the world's largest
+                Five structural reasons GMRWS meets the criteria of the world's largest
                 environmental and development grant frameworks.
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function FundingPage() {
             <p className="section-label">Funding Alignment</p>
             <h2 className="section-heading mb-4">Aligned Funding Sources</h2>
             <p className="text-gray-400 max-w-2xl">
-              SAI's mandate intersects the core programming criteria of every major multilateral
+              GMRWS's mandate intersects the core programming criteria of every major multilateral
               environmental and development fund.
             </p>
           </motion.div>
@@ -241,7 +241,7 @@ export default function FundingPage() {
         </div>
       </section>
 
-      {/* Why SAI Qualifies */}
+      {/* Why GMRWS Qualifies */}
       <section className="py-24 bg-navy-mid border-y border-navy-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -251,9 +251,9 @@ export default function FundingPage() {
             className="mb-14 text-center"
           >
             <p className="section-label">Eligibility Profile</p>
-            <h2 className="section-heading mb-4">Why SAI Qualifies</h2>
+            <h2 className="section-heading mb-4">Why GMRWS Qualifies</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Six structural attributes that make the SAI platform uniquely fundable across
+              Six structural attributes that make the GMRWS platform uniquely fundable across
               the full spectrum of environmental and development finance.
             </p>
           </motion.div>
@@ -295,7 +295,7 @@ export default function FundingPage() {
               </h2>
               <div className="space-y-4 text-gray-400 text-sm leading-relaxed">
                 <p>
-                  SAI is not a philanthropic platform that incidentally generates revenue. It is
+                  GMRWS is not a philanthropic platform that incidentally generates revenue. It is
                   a commercial technology company whose business model aligns private returns with
                   verified public environmental outcomes.
                 </p>
@@ -307,7 +307,7 @@ export default function FundingPage() {
                 </p>
                 <p>
                   For impact funds, family offices, and development finance institutions seeking
-                  catalytic capital deployment with verifiable SDG alignment, SAI offers a
+                  catalytic capital deployment with verifiable SDG alignment, GMRWS offers a
                   structure designed for that mandate.
                 </p>
               </div>

@@ -48,11 +48,11 @@ export default function Nav() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="flex items-center">
             <span className="text-2xl font-display font-bold text-gold group-hover:text-gold-light transition-colors">
-              SAI
+              GMRWS
             </span>
             <div className="w-px h-6 bg-navy-border mx-3" />
             <span className="text-xs font-medium tracking-[0.15em] uppercase text-gray-400 group-hover:text-gray-300 transition-colors hidden sm:block">
-              Sovereign Assets International
+              Global Mercury Removal & Water Security
             </span>
           </div>
         </Link>

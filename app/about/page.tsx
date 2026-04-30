@@ -8,37 +8,51 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 }
 
-// TODO: replace with real team data
 const team = [
   {
-    name: '[Team Member]',
+    name: 'Clark',
+    title: 'Founder / President',
+    background: '',
+  },
+  {
+    name: 'Eric Crowe',
+    title: 'Vice President',
+    background: '',
+  },
+  {
+    name: 'Sir Korrie Steven Hayes',
     title: 'Chief Executive Officer',
-    background: 'Background in environmental engineering and international resource development.',
+    background: '',
   },
   {
-    name: '[Team Member]',
+    name: 'Mike Vallone',
+    title: 'Chief Operating Officer',
+    background: '',
+  },
+  {
+    name: 'Elizabeth Hayes',
+    title: 'Chief Development Officer',
+    background: '',
+  },
+  {
+    name: 'Matt Dunn',
     title: 'Chief Technology Officer',
-    background: 'Specialist in geophysical sensing, mercury chemistry, and field deployment systems.',
+    background: '',
   },
   {
-    name: '[Team Member]',
-    title: 'Head of Community Infrastructure',
-    background: 'Two decades of hydrogeological fieldwork across Sub-Saharan Africa and Southeast Asia.',
+    name: 'Mitch Wardell',
+    title: 'Chief Financial Officer',
+    background: '',
   },
   {
-    name: '[Team Member]',
-    title: 'Director of Partnerships & Funding',
-    background: 'Former development bank advisor with multilateral grant structuring expertise.',
+    name: 'Elvis Araya',
+    title: 'Chief Commercial Officer ~ Costa Rica',
+    background: '',
   },
   {
-    name: '[Team Member]',
-    title: 'Lead Field Scientist',
-    background: 'Applied geochemist specializing in mercury speciation and soil molecular remediation.',
-  },
-  {
-    name: '[Team Member]',
-    title: 'Director of Operations ~ Africa',
-    background: 'On-the-ground program management across Ghana, Mali, and the DRC.',
+    name: 'Christian Kelch',
+    title: 'Chief Marketing Officer',
+    background: '',
   },
 ]
 
@@ -87,7 +101,7 @@ export default function AboutPage() {
             </h1>
             <div className="gold-line" />
             <p className="text-gray-400 text-lg leading-relaxed">
-              Sovereign Assets International operates as the commercial deployment vehicle for
+              Global Mercury Removal & Water Security operates as the commercial deployment vehicle for
               GeoNano R&D LLC's proprietary environmental remediation and resource recovery
               technology stack ~ over 20 years in development through field trials across
               three continents.
@@ -137,7 +151,7 @@ export default function AboutPage() {
                   were never part of any extraction decision.
                 </p>
                 <p>
-                  SAI was founded on a single conviction: that the science capable of
+                  GMRWS was founded on a single conviction: that the science capable of
                   diagnosing this contamination is also capable of reversing it ~ and that
                   reversing it creates assets worth more than the damage it repairs. Mercury
                   capture restores water safety. Water infrastructure delivers sovereignty.
@@ -153,7 +167,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   GeoNano R&D LLC holds the intellectual property, protocols, and technical
-                  methodologies behind the SAI platform. Sovereign Assets International is the
+                  methodologies behind the GMRWS platform. Global Mercury Removal & Water Security is the
                   global deployment and partnership entity ~ the interface between the science
                   and the capital, governments, and communities that can scale it.
                 </p>
@@ -181,7 +195,7 @@ export default function AboutPage() {
                 },
                 {
                   title: 'Self-Financing by Design',
-                  desc: 'We believe that remediation which depends perpetually on grant funding will always be outpaced by extraction. The SAI model breaks that cycle.',
+                  desc: 'We believe that remediation which depends perpetually on grant funding will always be outpaced by extraction. The GMRWS model breaks that cycle.',
                   accent: 'gold',
                 },
                 {
@@ -223,10 +237,6 @@ export default function AboutPage() {
             <p className="section-label">Leadership</p>
             <h2 className="section-heading">The Team</h2>
             <div className="gold-line" />
-            <p className="text-gray-500 text-sm">
-              {/* TODO: replace with real team data */}
-              Placeholder cards ~ names and bios to be finalized.
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -239,16 +249,16 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="card border border-navy-border group hover:border-gold/30 transition-colors"
               >
-                {/* Avatar placeholder */}
                 <div className="w-14 h-14 rounded-full bg-navy-border mb-5 flex items-center justify-center border border-navy-border group-hover:border-gold/30 transition-colors">
-                  <span className="text-gold text-lg font-display font-bold">?</span>
+                  <span className="text-gold text-lg font-display font-bold">{member.name.charAt(0)}</span>
                 </div>
-                {/* TODO: replace with real team data */}
                 <p className="text-white font-semibold mb-1">{member.name}</p>
                 <p className="text-gold text-xs font-medium uppercase tracking-wider mb-4">
                   {member.title}
                 </p>
-                <p className="text-gray-500 text-sm leading-relaxed">{member.background}</p>
+                {member.background && (
+                  <p className="text-gray-500 text-sm leading-relaxed">{member.background}</p>
+                )}
               </motion.div>
             ))}
           </div>
@@ -309,7 +319,7 @@ export default function AboutPage() {
             <p className="text-gray-600 text-xs uppercase tracking-wider mb-1">Legal Entity</p>
             <p className="text-gray-300 font-medium">GeoNano R&D LLC</p>
             <p className="text-gray-500 text-sm">
-              IP holder and R&D entity behind the SAI technology platform.
+              IP holder and R&D entity behind the GMRWS technology platform.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
