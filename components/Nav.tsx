@@ -1,10 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import BrandLockup from './BrandLockup'
 
 const links = [
   { href: '/technology', label: 'Technology' },
@@ -37,37 +37,28 @@ export default function Nav() {
     >
       {/* Announcement bar */}
       <div className="bg-teal/10 border-b border-teal/20 text-center py-2 px-4">
-        <p className="text-teal text-xs font-medium tracking-wide">
-          Phase 1 Pilot &nbsp;~&nbsp; Costa Rica 2026 &nbsp;~&nbsp;{' '}
+        <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-teal text-[0.68rem] font-medium tracking-wide sm:text-xs">
+          <span className="hidden sm:inline">Phase 1 Pilot</span>
+          <span className="hidden sm:inline" aria-hidden="true">~</span>
+          <span>Costa Rica 2026</span>
+          <span aria-hidden="true">~</span>
           <a href="/funding" className="underline underline-offset-2 hover:text-teal-light transition-colors">
             Now Seeking Grant Partners
           </a>
         </p>
       </div>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center group">
-          {/* Mobile: icon only */}
-          <Image
-            src="/brand/icon-white.png"
-            alt="Global Mercury Recovery & Water Security"
-            width={40}
-            height={40}
-            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity sm:hidden"
-          />
-          {/* Desktop: horizontal logo */}
-          <Image
-            src="/brand/logo-horizontal-white.png"
-            alt="Global Mercury Recovery & Water Security"
-            width={320}
-            height={56}
-            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity hidden sm:block"
-            priority
-          />
+        <Link
+          href="/"
+          className="flex min-w-0 items-center rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-4 focus-visible:ring-offset-navy"
+          aria-label="Global Mercury Recovery and Water Security home"
+        >
+          <BrandLockup />
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -86,7 +77,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex shrink-0 flex-col gap-1.5 p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -116,7 +107,7 @@ export default function Nav() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-navy-mid border-b border-navy-border overflow-hidden"
+            className="lg:hidden bg-navy-mid border-b border-navy-border overflow-hidden"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {links.map((link) => (

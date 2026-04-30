@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import BrandLockup from './BrandLockup'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -27,13 +27,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-6">
-              <Image
-                src="/brand/logo-horizontal-white.png"
-                alt="Global Mercury Recovery & Water Security"
-                width={340}
-                height={60}
-                className="h-11 w-auto opacity-90"
-              />
+              <BrandLockup context="footer" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
               Transforming environmental liabilities into sovereign assets through science-driven
