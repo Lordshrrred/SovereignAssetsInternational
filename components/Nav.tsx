@@ -47,7 +47,7 @@ export default function Nav() {
           </a>
         </p>
       </div>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -77,7 +77,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden flex shrink-0 flex-col gap-1.5 p-2"
+          className="fixed right-4 top-[4.5rem] z-[60] flex h-10 w-10 -translate-y-1/2 shrink-0 flex-col items-center justify-center gap-1.5 rounded-sm border border-white/15 bg-navy/80 p-2 shadow-[0_0_18px_rgba(0,0,0,0.25)] backdrop-blur lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >

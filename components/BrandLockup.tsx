@@ -9,14 +9,14 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
 
   return (
     <div
-      className={`group/brand flex items-center ${
-        isFooter ? 'gap-4' : 'gap-3.5'
+      className={`group/brand flex min-w-0 items-center ${
+        isFooter ? 'gap-4' : 'gap-3 sm:gap-3.5'
       }`}
       aria-label="Global Mercury Recovery and Water Security"
     >
       <div
         className={`relative shrink-0 overflow-visible ${
-          isFooter ? 'h-14 w-14' : 'h-11 w-11'
+          isFooter ? 'h-14 w-14' : 'h-10 w-10 sm:h-11 sm:w-11'
         }`}
         aria-hidden="true"
       >
@@ -31,14 +31,14 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
         />
       </div>
 
-      <div className="min-w-0">
+      <div className="min-w-0 shrink">
         <Image
           src="/brand/global-wordmark-white.png"
           alt=""
           width={3200}
           height={455}
           className={`object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)] ${
-            isFooter ? 'h-10 w-auto' : 'h-8 w-auto'
+            isFooter ? 'h-10 w-auto max-w-full' : 'h-7 w-auto max-w-[11rem] sm:h-8 sm:max-w-none'
           }`}
           priority={!isFooter}
           aria-hidden="true"
