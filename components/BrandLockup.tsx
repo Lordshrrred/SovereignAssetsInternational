@@ -4,19 +4,6 @@ type BrandLockupProps = {
   context?: 'nav' | 'footer'
 }
 
-const globalLetters = ['G', 'L', 'O', 'B', 'A', 'L']
-
-function BrandA() {
-  return (
-    <img
-      src="/brand/clean-stylized-a-white.svg"
-      alt=""
-      className="h-[1.18em] w-[1.18em] object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.18)]"
-      aria-hidden="true"
-    />
-  )
-}
-
 export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
   const isFooter = context === 'footer'
 
@@ -45,27 +32,19 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
       </div>
 
       <div className="min-w-0">
-        <div
-          className={`flex items-center font-sans font-semibold leading-none text-white ${
-            isFooter ? 'gap-1 text-2xl' : 'gap-[0.2rem] text-2xl'
+        <Image
+          src="/brand/global-wordmark-white.png"
+          alt=""
+          width={3200}
+          height={455}
+          className={`object-contain object-left opacity-95 ${
+            isFooter ? 'h-8 w-auto' : 'h-[1.55rem] w-auto'
           }`}
+          priority={!isFooter}
           aria-hidden="true"
-        >
-          {globalLetters.map((letter, index) => (
-            <span
-              key={`${letter}-${index}`}
-              className={
-                letter === 'A'
-                  ? 'relative inline-flex h-[0.92em] w-[0.9em] items-center justify-center'
-                  : 'tracking-[0.09em]'
-              }
-            >
-              {letter === 'A' ? <BrandA /> : letter}
-            </span>
-          ))}
-        </div>
+        />
         <div
-          className={`mt-1 font-sans font-semibold uppercase leading-tight tracking-[0.18em] text-gray-300 ${
+          className={`mt-1.5 font-sans font-semibold uppercase leading-tight tracking-[0.18em] text-gray-300 ${
             isFooter ? 'text-[0.62rem]' : 'hidden text-[0.58rem] sm:block'
           }`}
         >
