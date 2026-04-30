@@ -6,6 +6,30 @@ type BrandLockupProps = {
 
 const globalLetters = ['G', 'L', 'O', 'B', 'A', 'L']
 
+function BrandA() {
+  return (
+    <svg
+      viewBox="0 0 68 64"
+      className="h-[1.12em] w-[1.16em] overflow-visible drop-shadow-[0_0_10px_rgba(201,168,76,0.24)]"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M6 51 L30 4 H38 L17 51 H6 Z"
+        fill="currentColor"
+      />
+      <path
+        d="M38 4 L62 51 H51 L30 4 H38 Z"
+        fill="currentColor"
+      />
+      <path
+        d="M2 60 C18 49 43 48 66 58 L64 63 C43 57 20 56 5 64 L2 60 Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
 export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
   const isFooter = context === 'footer'
 
@@ -45,18 +69,11 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
               key={`${letter}-${index}`}
               className={
                 letter === 'A'
-                  ? 'relative inline-flex h-[0.88em] w-[0.72em] items-end justify-center text-gold'
+                  ? 'relative inline-flex h-[0.92em] w-[0.84em] items-center justify-center text-gold'
                   : 'tracking-[0.09em]'
               }
             >
-              {letter === 'A' ? (
-                <>
-                  <span className="absolute inset-x-0 bottom-0 mx-auto h-full w-full [clip-path:polygon(50%_0,100%_100%,78%_100%,62%_64%,38%_64%,22%_100%,0_100%)] bg-gold-gradient shadow-[0_0_14px_rgba(201,168,76,0.28)]" />
-                  <span className="absolute bottom-[0.23em] left-[27%] right-[27%] h-[0.1em] bg-navy" />
-                </>
-              ) : (
-                letter
-              )}
+              {letter === 'A' ? <BrandA /> : letter}
             </span>
           ))}
         </div>
