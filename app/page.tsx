@@ -4,18 +4,9 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { team } from '@/lib/team'
+import { fadeUpHero as fadeUp, stagger } from '@/lib/animations'
 
 const featuredSlugs = ['clark', 'korrie-hayes', 'mike-vallone', 'elizabeth-hayes', 'matt-dunn', 'elvis-araya']
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } },
-}
-
-const stagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
-}
 
 const stats = [
   { value: '2026', label: 'Pilot Launch', sub: 'Costa Rica ~ Phase 1' },
@@ -160,7 +151,6 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-0 sm:divide-x divide-navy-border">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center px-8">
-                {/* TODO: replace with real data */}
                 <p className="text-4xl md:text-5xl font-display font-bold text-gradient-gold mb-2">
                   {stat.value}
                 </p>

@@ -4,13 +4,8 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { team } from '@/lib/team'
+import { fadeUp } from '@/lib/animations'
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-}
-
-// TODO: replace with real advisory data
 const advisors = [
   {
     name: '[Advisory Member]',
@@ -282,7 +277,6 @@ export default function AboutPage() {
             <h2 className="section-heading">Technical & Strategic Advisors</h2>
             <div className="gold-line" />
             <p className="text-gray-500 text-sm">
-              {/* TODO: replace with real advisory data */}
               Advisory board structure ~ members to be confirmed.
             </p>
           </motion.div>

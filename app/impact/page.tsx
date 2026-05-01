@@ -2,11 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-}
+import { fadeUp } from '@/lib/animations'
 
 const envImpacts = [
   {
@@ -53,8 +49,6 @@ const socialImpacts = [
     desc: 'Platform commitment. Non-negotiable design principle ~ all water infrastructure transfers to community ownership at handover.',
   },
 ]
-
-// TODO: replace with real data
 const developmentImpacts = [
   {
     metric: 'Self-financing',
@@ -191,7 +185,6 @@ export default function ImpactPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="card border border-gold/20"
               >
-                {/* TODO: replace with real data */}
                 <p className="text-3xl font-display font-bold text-gradient-gold mb-2">
                   {item.metric}
                 </p>
@@ -222,7 +215,6 @@ export default function ImpactPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="card border border-teal/20"
               >
-                {/* TODO: replace with real data */}
                 <p className="text-3xl font-display font-bold text-gradient-teal mb-2">
                   {item.metric}
                 </p>
@@ -255,7 +247,6 @@ export default function ImpactPage() {
                     transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="card border border-navy-border"
                   >
-                    {/* TODO: replace with real data */}
                     <p className="text-2xl font-display font-bold text-gold mb-2">{item.metric}</p>
                     <p className="text-white font-semibold text-sm mb-2">{item.label}</p>
                     <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
@@ -404,7 +395,6 @@ export default function ImpactPage() {
           >
             <p className="section-label">Geographic Focus</p>
             <h2 className="section-heading mb-4">Target Regions</h2>
-            {/* TODO: replace with real interactive map */}
             <div className="mt-6 mb-10 bg-navy-card border border-navy-border rounded-sm h-64 flex items-center justify-center">
               <p className="text-gray-600 text-sm">
                 [Interactive region map ~ Africa · South America · Southeast Asia]
