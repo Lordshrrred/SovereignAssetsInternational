@@ -107,13 +107,13 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.p variants={fadeUp} className="section-label mx-auto max-w-[20rem] text-[0.68rem] leading-relaxed sm:max-w-none sm:text-xs">
+            <motion.p variants={fadeUp} className="section-label mx-auto max-w-[18rem] text-[0.65rem] leading-relaxed tracking-[0.16em] sm:max-w-none sm:text-xs sm:tracking-[0.2em]">
               Global Environmental Remediation Platform
             </motion.p>
 
             <motion.h1
               variants={fadeUp}
-              className="mx-auto max-w-[21rem] text-[2.25rem] font-display font-bold leading-[1.06] text-white sm:max-w-3xl sm:text-5xl md:text-6xl lg:max-w-5xl lg:text-7xl"
+              className="mx-auto max-w-[19.5rem] text-[2rem] font-display font-bold leading-[1.08] text-white sm:max-w-3xl sm:text-5xl md:text-6xl lg:max-w-5xl lg:text-7xl"
             >
               Transforming Environmental{' '}
               <span className="text-gradient-gold">Liabilities</span> Into{' '}

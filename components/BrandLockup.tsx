@@ -44,10 +44,10 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
           aria-hidden="true"
         />
         <Image
-          src="/brand/logo-horizontal-white.png"
+          src="/brand/global-wordmark-white.png"
           alt=""
-          width={320}
-          height={120}
+          width={3200}
+          height={455}
           className={`object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)] ${
             isFooter ? 'h-10 w-auto max-w-full' : 'hidden h-7 w-auto max-w-[11rem] sm:block sm:h-8 sm:max-w-none'
           }`}
