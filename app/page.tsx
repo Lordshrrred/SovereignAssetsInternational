@@ -3,6 +3,9 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { team } from '@/lib/team'
+
+const featuredSlugs = ['clark', 'korrie-hayes', 'mike-vallone', 'elizabeth-hayes', 'matt-dunn', 'elvis-araya']
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -74,7 +77,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-navy" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(0,212,170,0.08),transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_80%,rgba(201,168,76,0.06),transparent)]" />
@@ -88,8 +91,8 @@ export default function Home() {
           }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-44 pb-32">
-          <motion.div variants={stagger} initial="hidden" animate="show" className="space-y-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-20 sm:pt-44 sm:pb-32">
+          <motion.div variants={stagger} initial="hidden" animate="show" className="space-y-5 sm:space-y-8">
             <motion.div variants={fadeUp} className="flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-2xl scale-150" />
@@ -98,19 +101,19 @@ export default function Home() {
                   alt="Global Mercury Recovery & Water Security"
                   width={96}
                   height={96}
-                  className="relative h-20 w-auto opacity-90"
+                  className="relative h-14 w-auto opacity-90 sm:h-20"
                   priority
                 />
               </div>
             </motion.div>
 
-            <motion.p variants={fadeUp} className="section-label">
+            <motion.p variants={fadeUp} className="section-label mx-auto max-w-[20rem] text-[0.68rem] leading-relaxed sm:max-w-none sm:text-xs">
               Global Environmental Remediation Platform
             </motion.p>
 
             <motion.h1
               variants={fadeUp}
-              className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight max-w-5xl mx-auto"
+              className="mx-auto max-w-[21rem] text-[2.25rem] font-display font-bold leading-[1.06] text-white sm:max-w-3xl sm:text-5xl md:text-6xl lg:max-w-5xl lg:text-7xl"
             >
               Transforming Environmental{' '}
               <span className="text-gradient-gold">Liabilities</span> Into{' '}
@@ -119,7 +122,7 @@ export default function Home() {
 
             <motion.p
               variants={fadeUp}
-              className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+              className="mx-auto max-w-[22rem] text-[0.95rem] leading-relaxed text-gray-400 sm:max-w-2xl sm:text-lg md:max-w-3xl md:text-xl"
             >
               GMRWS deploys a five-pillar technology platform ~ mercury remediation, community water
               infrastructure, subsurface intelligence, land regeneration, and aquifer protection ~
@@ -143,7 +146,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 1 }}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+            className="absolute bottom-12 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex"
           >
             <span className="text-gray-600 text-xs tracking-widest uppercase">Scroll</span>
             <div className="w-px h-12 bg-gradient-to-b from-gray-600 to-transparent" />
@@ -275,6 +278,85 @@ export default function Home() {
                 <p className="text-gray-500 text-xs mt-1">{p.role}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Preview */}
+      <section className="py-24 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-6"
+          >
+            <div>
+              <p className="section-label">Leadership</p>
+              <h2 className="section-heading max-w-xl">
+                The Team Behind the Platform
+              </h2>
+              <div className="gold-line" />
+            </div>
+            <Link href="/about" className="btn-outline text-xs self-start sm:self-auto flex-none">
+              View Full Team
+            </Link>
+          </motion.div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {team
+              .filter((m) => featuredSlugs.includes(m.slug))
+              .sort((a, b) => featuredSlugs.indexOf(a.slug) - featuredSlugs.indexOf(b.slug))
+              .map((member, i) => {
+                const initials = member.name
+                  .split(' ')
+                  .filter((w) => w.length > 1)
+                  .slice(0, 2)
+                  .map((w) => w[0])
+                  .join('')
+
+                return (
+                  <motion.div
+                    key={member.slug}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.07 }}
+                    whileHover={{ y: -4 }}
+                  >
+                    <Link
+                      href={`/team/${member.slug}`}
+                      className="flex flex-col items-center text-center group cursor-pointer"
+                    >
+                      {/* Photo / Avatar */}
+                      {member.headshot ? (
+                        <div className="w-full aspect-square rounded-sm overflow-hidden border border-navy-border group-hover:border-gold/30 transition-colors mb-3 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
+                          <Image
+                            src={member.headshot}
+                            alt={member.name}
+                            width={200}
+                            height={200}
+                            className="w-full h-full object-cover object-top"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-full aspect-square rounded-sm bg-navy-card border border-navy-border group-hover:border-gold/30 transition-colors mb-3 flex items-center justify-center">
+                          <span className="text-gold text-2xl font-display font-bold opacity-60">
+                            {initials}
+                          </span>
+                        </div>
+                      )}
+                      <p className="text-white text-xs font-semibold leading-snug group-hover:text-gold transition-colors">
+                        {member.name}
+                      </p>
+                      <p className="text-gray-500 text-[0.65rem] uppercase tracking-wider mt-0.5 leading-tight">
+                        {member.title.replace(' ~ Costa Rica', '')}
+                      </p>
+                    </Link>
+                  </motion.div>
+                )
+              })}
           </div>
         </div>
       </section>

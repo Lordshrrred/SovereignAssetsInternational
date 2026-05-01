@@ -3,59 +3,12 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { team } from '@/lib/team'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 }
-
-const team = [
-  {
-    name: 'Clark',
-    title: 'Founder / President',
-    background: '',
-  },
-  {
-    name: 'Eric Crowe',
-    title: 'Vice President',
-    background: '',
-  },
-  {
-    name: 'Sir Korrie Steven Hayes',
-    title: 'Chief Executive Officer',
-    background: '',
-  },
-  {
-    name: 'Mike Vallone',
-    title: 'Chief Operating Officer',
-    background: '',
-  },
-  {
-    name: 'Elizabeth Hayes',
-    title: 'Chief Development Officer',
-    background: '',
-  },
-  {
-    name: 'Matt Dunn',
-    title: 'Chief Technology Officer',
-    background: '',
-  },
-  {
-    name: 'Mitch Wardell',
-    title: 'Chief Financial Officer',
-    background: '',
-  },
-  {
-    name: 'Elvis Araya',
-    title: 'Chief Commercial Officer ~ Costa Rica',
-    background: '',
-  },
-  {
-    name: 'Christian Kelch',
-    title: 'Chief Marketing Officer',
-    background: '',
-  },
-]
 
 // TODO: replace with real advisory data
 const advisors = [
@@ -94,7 +47,6 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="pt-44 pb-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-20%,rgba(201,168,76,0.06),transparent)]" />
-        {/* Brand icon watermark — top right */}
         <div className="absolute top-20 right-8 lg:right-24 opacity-[0.06] pointer-events-none select-none">
           <Image
             src="/brand/icon-white.png"
@@ -128,7 +80,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:divide-x divide-navy-border">
             {credentials.map((c) => (
               <div key={c.label} className="text-center px-4">
-                {/* TODO: replace with real data */}
                 <p className="text-4xl font-display font-bold text-gradient-gold mb-1">{c.value}</p>
                 <p className="text-white text-sm font-semibold mb-1">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.sub}</p>
@@ -193,7 +144,6 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
-              {/* Values */}
               {[
                 {
                   title: 'Science-First',
@@ -249,30 +199,66 @@ export default function AboutPage() {
             <p className="section-label">Leadership</p>
             <h2 className="section-heading">The Team</h2>
             <div className="gold-line" />
+            <p className="text-gray-500 text-sm max-w-xl">
+              Click any member to view their full profile and background.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {team.map((member, i) => (
-              <motion.div
-                key={`${member.title}-${i}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="card border border-navy-border group hover:border-gold/30 transition-colors"
-              >
-                <div className="w-14 h-14 rounded-full bg-navy-border mb-5 flex items-center justify-center border border-navy-border group-hover:border-gold/30 transition-colors">
-                  <span className="text-gold text-lg font-display font-bold">{member.name.charAt(0)}</span>
-                </div>
-                <p className="text-white font-semibold mb-1">{member.name}</p>
-                <p className="text-gold text-xs font-medium uppercase tracking-wider mb-4">
-                  {member.title}
-                </p>
-                {member.background && (
-                  <p className="text-gray-500 text-sm leading-relaxed">{member.background}</p>
-                )}
-              </motion.div>
-            ))}
+            {team.map((member, i) => {
+              const initials = member.name
+                .split(' ')
+                .filter((w) => w.length > 1)
+                .slice(0, 2)
+                .map((w) => w[0])
+                .join('')
+
+              return (
+                <motion.div
+                  key={member.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.07 }}
+                  whileHover={{ y: -4 }}
+                >
+                  <Link
+                    href={`/team/${member.slug}`}
+                    className="card border border-navy-border group hover:border-gold/30 hover:shadow-[0_0_24px_rgba(201,168,76,0.06)] transition-all duration-300 flex flex-col h-full cursor-pointer"
+                  >
+                    {/* Headshot / Avatar */}
+                    <div className="mb-5">
+                      {member.headshot ? (
+                        <div className="w-full aspect-[4/3] rounded-sm overflow-hidden border border-navy-border group-hover:border-gold/20 transition-colors">
+                          <Image
+                            src={member.headshot}
+                            alt={member.name}
+                            width={400}
+                            height={300}
+                            className="w-full h-full object-cover object-top"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-16 h-16 rounded-full bg-navy-border flex items-center justify-center border border-navy-border group-hover:border-gold/30 transition-colors">
+                          <span className="text-gold text-xl font-display font-bold">{initials}</span>
+                        </div>
+                      )}
+                    </div>
+
+                    <p className="text-white font-semibold mb-1">{member.name}</p>
+                    <p className="text-gold text-xs font-medium uppercase tracking-wider mb-3">
+                      {member.title}
+                    </p>
+                    <p className="text-gray-500 text-sm leading-relaxed flex-1 line-clamp-3">
+                      {member.shortBio}
+                    </p>
+                    <p className="mt-4 text-gold text-xs font-semibold uppercase tracking-wider group-hover:translate-x-1 transition-transform duration-200">
+                      View Profile →
+                    </p>
+                  </Link>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -310,7 +296,6 @@ export default function AboutPage() {
                     <span className="text-teal text-sm font-bold">?</span>
                   </div>
                   <div>
-                    {/* TODO: replace with real advisory data */}
                     <p className="text-white font-semibold text-sm mb-0.5">{advisor.name}</p>
                     <p className="text-teal text-xs font-medium uppercase tracking-wider mb-3">
                       {advisor.affiliation}

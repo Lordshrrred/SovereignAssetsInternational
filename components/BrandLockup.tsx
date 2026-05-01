@@ -33,12 +33,23 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
 
       <div className="min-w-0 shrink">
         <Image
-          src="/brand/global-wordmark-white.png"
+          src="/brand/logo-stacked-white.png"
           alt=""
-          width={3200}
-          height={455}
+          width={320}
+          height={160}
           className={`object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)] ${
-            isFooter ? 'h-10 w-auto max-w-full' : 'h-7 w-auto max-w-[11rem] sm:h-8 sm:max-w-none'
+            isFooter ? 'hidden' : 'block h-10 w-auto max-w-[10rem] sm:hidden'
+          }`}
+          priority={!isFooter}
+          aria-hidden="true"
+        />
+        <Image
+          src="/brand/logo-horizontal-white.png"
+          alt=""
+          width={320}
+          height={120}
+          className={`object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)] ${
+            isFooter ? 'h-10 w-auto max-w-full' : 'hidden h-7 w-auto max-w-[11rem] sm:block sm:h-8 sm:max-w-none'
           }`}
           priority={!isFooter}
           aria-hidden="true"
