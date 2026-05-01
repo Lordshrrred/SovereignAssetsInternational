@@ -226,7 +226,7 @@ export default function AboutPage() {
                     href={`/team/${member.slug}`}
                     className="bg-navy-card border border-navy-border rounded-sm overflow-hidden group hover:border-gold/30 hover:shadow-[0_0_24px_rgba(201,168,76,0.06)] transition-all duration-300 flex flex-col h-full cursor-pointer"
                   >
-                    {/* Headshot — full-bleed, no padding */}
+                    {/* Headshot: full-bleed, no padding */}
                     {member.headshot ? (
                       <div className="w-full aspect-square overflow-hidden flex-none">
                         <Image
