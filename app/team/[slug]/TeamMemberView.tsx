@@ -51,7 +51,7 @@ export default function TeamMemberView({ member }: { member: TeamMember }) {
                     width={256}
                     height={256}
                     className="w-full h-full object-cover object-top scale-[1.35]"
-                    style={{ transformOrigin: '50% 18%' }}
+                    style={{ transformOrigin: '50% 30%' }}
                   />
                 </div>
               ) : (
