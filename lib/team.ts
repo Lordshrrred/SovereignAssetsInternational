@@ -42,7 +42,7 @@ export const team: TeamMember[] = [
     title: 'Chief Executive Officer',
     slug: 'korrie-hayes',
     headshot: '/team/korrie-hayes.jpg',
-    headshotFit: { objectPosition: '50% 15%' },
+    headshotFit: { objectPosition: '50% 42%' },
     shortBio:
       'A decorated global commodity consultant and Knight of the Princely House of Schaumburg-Lippe-Nachod, Sir Korrie brings deep expertise in cross-border trade compliance, Kimberley Process certification, and intergovernmental diplomatic engagement to the GMRWS platform.',
     bio: [
@@ -96,7 +96,7 @@ export const team: TeamMember[] = [
     title: 'Chief Development Officer',
     slug: 'elizabeth-hayes',
     headshot: '/team/elizabeth-hayes.jpg',
-    headshotFit: { objectPosition: '50% 10%' },
+    headshotFit: { objectPosition: '50% 0%' },
     shortBio:
       'With over fourteen years in graphic design and logistics operations, including international freight exports and global brand development at Subterranean Trading LLC, Elizabeth brings operational precision and creative leadership to every dimension of GMRWS\'s development strategy.',
     bio: [
