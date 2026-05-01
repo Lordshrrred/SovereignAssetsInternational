@@ -19,7 +19,8 @@ export const team: TeamMember[] = [
     name: 'Clark',
     title: 'Founder / President',
     slug: 'clark',
-    headshot: null,
+    headshot: '/team/clark.jpg',
+    headshotFit: { objectPosition: '50% 20%' },
     shortBio:
       'The visionary founder behind the GMRWS platform, Clark has spent over two decades developing the field science and strategic frameworks that make planetary-scale mercury remediation possible.',
     bio: ['Full profile coming soon.'],
@@ -32,10 +33,26 @@ export const team: TeamMember[] = [
     slug: 'eric-crowe',
     headshot: null,
     shortBio:
-      'Eric brings executive leadership and organizational development expertise to the GMRWS platform, supporting the operational and strategic infrastructure required to scale global remediation deployments.',
-    bio: ['Full profile coming soon.'],
-    credentials: [],
-    focus: ['Executive Operations', 'Organizational Development', 'Strategic Partnerships'],
+      'A lifetime entrepreneur and environmental safety professional with over 50 years of hands-on experience in construction, hazardous materials compliance, infrastructure development, and mining operations, Eric brings credentialed field expertise and decades of complex project execution to the GMRWS leadership team.',
+    bio: [
+      'Eric P. Crowe has spent over five decades operating at the intersection of environmental safety, large-scale construction, and industrial project management. Fully certified in AHERA asbestos disciplines (Inspector, Supervisor, and Management Planner) through South Dakota State University\'s College of Engineering, and holding a State of Colorado Asbestos Building Inspector certification, Eric brings a rare depth of environmental compliance expertise rooted not in theory but in decades of field execution. His 40-Hour HAZWOPER certification and OSHA annual refresher training reflect a career-long commitment to operating at the highest regulatory standard in hazardous environments.',
+      'His project portfolio spans some of the most demanding industrial and civic construction environments in the country. At Coors Field, home of the Colorado Rockies, Eric managed the full industrial coating project from specification writing through crew management and sandblasting, delivering a result that has stood for 30 years without repainting. At the Merrill Lynch World Headquarters, he served as Project Manager for the steel painting scope. Across Denver\'s underground tunnel systems and the Speer Boulevard Bridge Viaduct, he led environmental assessment and structural project work at significant public infrastructure scale.',
+      'In mining environments, Eric contributed to Black Hills Gold Operations in South Dakota, including construction of a one-mile conveyor belt system using vacuum-sealed Kevlar/rubber technology for precision gold transport. His work with Storm Shelters USA, Inc. through FEMA\'s Project Impact initiative gave him direct experience developing and validating disaster-resistant structural systems, including shelters independently tested at 250 mph wind forces by Texas Tech University\'s Wind Engineering Research Center. At GMRWS, Eric brings this combination of environmental credentialing, mining field experience, and large-scale project execution to the operational and strategic infrastructure the platform requires.',
+    ],
+    credentials: [
+      'AHERA Asbestos Inspector (SDSU, 1990)',
+      'AHERA Asbestos Supervisor / Contractor (SDSU, 1990)',
+      'AHERA Asbestos Management Planner (SDSU, 1990)',
+      'State of Colorado Asbestos Building Inspector (Cert. No. 10164)',
+      '40-Hour HAZWOPER Certification (2006)',
+      'OSHA HAZWOPER Annual Refresher (29 CFR 1910.120)',
+    ],
+    focus: [
+      'Environmental Compliance & Safety',
+      'Large-Scale Project Management',
+      'Mining & Infrastructure Operations',
+      'Hazardous Materials (HAZWOPER / AHERA)',
+    ],
   },
   {
     name: 'Sir Korrie Steven Hayes',
