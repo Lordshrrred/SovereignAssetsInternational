@@ -116,12 +116,28 @@ export const team: TeamMember[] = [
     name: 'Matt Dunn',
     title: 'Chief Technology Officer',
     slug: 'matt-dunn',
-    headshot: null,
+    headshot: '/team/matt-dunn.jpg',
     shortBio:
-      'Matt leads the technology architecture and digital infrastructure that powers the GMRWS platform — from data systems and field reporting tools to investor-facing applications and environmental monitoring integrations.',
-    bio: ['Full profile coming soon.'],
-    credentials: [],
-    focus: ['Technology Architecture', 'Digital Infrastructure', 'Data Systems'],
+      'A twenty-year builder of digital infrastructure and an early adopter of agentic AI, Matt architects the systems that make the GMRWS platform legible, scalable, and investor-ready — combining deep technical fluency with a track record of leading people and closing business in high-stakes environments.',
+    bio: [
+      'Matt Dunn brings two decades of hands-on technical architecture, AI systems development, and entrepreneurial execution to the GMRWS leadership team. As an early adopter of Claude Code, ChatGPT, and agentic AI frameworks, he has spent years building full-stack digital platforms from concept to deployment — including Vibration of Awesome (VOA), a multi-platform content and digital product ecosystem. His blockchain career spans nine-plus years across DeFi, NFTs, and tokenization mechanics on multiple chains, and includes completing the Solana Blockchain Rust Development Bootcamp at Encode Club in 2024.',
+      'At Apple, Matt progressed through three roles — Training Lead, Sales Leader, and Technical Expert — ranking in the top 3 performers every quarter on revenue and upsell metrics while driving a 7% improvement in customer satisfaction scores across both the sales floor and the Genius Bar. That discipline for performance in technical environments was built earlier across four years as a commercial electrician on institutional job sites, and three years as an Operations Technician in a GMP-certified, ISO 9001-compliant industrial manufacturing facility — work that demanded the kind of precision, documentation rigor, and process discipline that complex field deployments require.',
+      'Before his technology career, Matt spent three and a half years as a Team Leader and frontline canvasser for Greenpeace USA — personally recruiting 719 monthly contributors generating $324,765 in projected lifetime donor value, and building the canvassing crews that sustained that performance. The combination of technical depth, sales conviction, and environmental mission is not incidental. At GMRWS, Matt leads the technology architecture, digital systems, and AI infrastructure that connect the platform\'s field science to the investors, partners, and governments it needs to scale.',
+    ],
+    credentials: [
+      'AI Systems Architecture (Claude Code, ChatGPT, Agents)',
+      'Blockchain & Web3 (Solana, DeFi, NFTs, Tokenization)',
+      'Digital Infrastructure & Full-Stack Development',
+      'GMP & ISO 9001 Regulatory Compliance',
+      'Apple Certified Hardware & Software Technician',
+      'Sales Leadership & Donor Acquisition',
+    ],
+    focus: [
+      'Technology Architecture',
+      'AI & Agentic Systems',
+      'Blockchain Infrastructure',
+      'Digital Platform Development',
+    ],
   },
   {
     name: 'Mitch Wardell',

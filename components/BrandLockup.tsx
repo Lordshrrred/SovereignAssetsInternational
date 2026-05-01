@@ -32,17 +32,19 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
       </div>
 
       <div className="min-w-0 shrink">
-        <Image
-          src="/brand/logo-stacked-white.png"
-          alt=""
-          width={320}
-          height={160}
-          className={`object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)] ${
-            isFooter ? 'hidden' : 'block h-10 w-auto max-w-[10rem] sm:hidden'
-          }`}
-          priority={!isFooter}
-          aria-hidden="true"
-        />
+        {!isFooter && (
+          <div className="block w-[9.25rem] sm:hidden" aria-hidden="true">
+            <div className="font-sans text-[0.82rem] font-extrabold uppercase leading-none tracking-[0.12em] text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.16)]">
+              Global Mercury
+            </div>
+            <div className="mt-1 font-sans text-[0.9rem] font-extrabold uppercase leading-none tracking-[0.18em] text-gold drop-shadow-[0_0_12px_rgba(201,168,76,0.2)]">
+              Recovery
+            </div>
+            <div className="mt-1.5 font-sans text-[0.56rem] font-bold uppercase leading-none tracking-[0.17em] text-teal drop-shadow-[0_0_12px_rgba(0,212,170,0.2)]">
+              Water &amp; Security
+            </div>
+          </div>
+        )}
         <Image
           src="/brand/global-wordmark-white.png"
           alt=""
