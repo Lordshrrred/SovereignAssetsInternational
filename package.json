@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "next build && rsync -a --delete --exclude='CNAME' --exclude='.nojekyll' out/ docs/ && touch docs/.nojekyll",
     "start": "next start",
     "lint": "next lint"
   },
