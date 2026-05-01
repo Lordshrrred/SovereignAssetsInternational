@@ -337,7 +337,8 @@ export default function Home() {
                             alt={member.name}
                             width={400}
                             height={400}
-                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            className="w-full h-full object-cover object-top scale-[1.4] group-hover:scale-[1.5] transition-transform duration-500"
+                            style={{ transformOrigin: '50% 18%' }}
                           />
                         </div>
                       ) : (
