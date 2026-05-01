@@ -33,15 +33,21 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
 
       <div className="min-w-0 shrink">
         {!isFooter && (
-          <div className="block w-[9.25rem] sm:hidden" aria-hidden="true">
-            <div className="font-sans text-[0.82rem] font-extrabold uppercase leading-none tracking-[0.12em] text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.16)]">
-              Global Mercury
+          <div className="block w-[9.5rem] sm:hidden" aria-hidden="true">
+            <Image
+              src="/brand/global-wordmark-white.png"
+              alt=""
+              width={3200}
+              height={455}
+              className="h-5 w-auto max-w-full object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)]"
+              priority
+              aria-hidden="true"
+            />
+            <div className="mt-1.5 font-sans text-[0.58rem] font-semibold uppercase leading-none tracking-[0.17em] text-white/80">
+              Mercury Recovery
             </div>
-            <div className="mt-1 font-sans text-[0.9rem] font-extrabold uppercase leading-none tracking-[0.18em] text-gold drop-shadow-[0_0_12px_rgba(201,168,76,0.2)]">
-              Recovery
-            </div>
-            <div className="mt-1.5 font-sans text-[0.56rem] font-bold uppercase leading-none tracking-[0.17em] text-teal drop-shadow-[0_0_12px_rgba(0,212,170,0.2)]">
-              Water &amp; Security
+            <div className="mt-1 font-sans text-[0.58rem] font-semibold uppercase leading-none tracking-[0.18em] text-teal">
+              Water Security
             </div>
           </div>
         )}
