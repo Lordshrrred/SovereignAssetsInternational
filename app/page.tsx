@@ -335,9 +335,9 @@ export default function Home() {
                           <Image
                             src={member.headshot}
                             alt={member.name}
-                            width={200}
-                            height={200}
-                            className="w-full h-full object-cover object-top"
+                            width={400}
+                            height={400}
+                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
                       ) : (

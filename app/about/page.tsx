@@ -224,37 +224,38 @@ export default function AboutPage() {
                 >
                   <Link
                     href={`/team/${member.slug}`}
-                    className="card border border-navy-border group hover:border-gold/30 hover:shadow-[0_0_24px_rgba(201,168,76,0.06)] transition-all duration-300 flex flex-col h-full cursor-pointer"
+                    className="bg-navy-card border border-navy-border rounded-sm overflow-hidden group hover:border-gold/30 hover:shadow-[0_0_24px_rgba(201,168,76,0.06)] transition-all duration-300 flex flex-col h-full cursor-pointer"
                   >
-                    {/* Headshot / Avatar */}
-                    <div className="mb-5">
-                      {member.headshot ? (
-                        <div className="w-full aspect-[4/3] rounded-sm overflow-hidden border border-navy-border group-hover:border-gold/20 transition-colors">
-                          <Image
-                            src={member.headshot}
-                            alt={member.name}
-                            width={400}
-                            height={300}
-                            className="w-full h-full object-cover object-top"
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-16 h-16 rounded-full bg-navy-border flex items-center justify-center border border-navy-border group-hover:border-gold/30 transition-colors">
-                          <span className="text-gold text-xl font-display font-bold">{initials}</span>
-                        </div>
-                      )}
-                    </div>
+                    {/* Headshot — full-bleed, no padding */}
+                    {member.headshot ? (
+                      <div className="w-full aspect-square overflow-hidden flex-none">
+                        <Image
+                          src={member.headshot}
+                          alt={member.name}
+                          width={400}
+                          height={400}
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-full aspect-square bg-navy-border flex items-center justify-center flex-none">
+                        <span className="text-gold text-4xl font-display font-bold opacity-60">{initials}</span>
+                      </div>
+                    )}
 
-                    <p className="text-white font-semibold mb-1">{member.name}</p>
-                    <p className="text-gold text-xs font-medium uppercase tracking-wider mb-3">
-                      {member.title}
-                    </p>
-                    <p className="text-gray-500 text-sm leading-relaxed flex-1 line-clamp-3">
-                      {member.shortBio}
-                    </p>
-                    <p className="mt-4 text-gold text-xs font-semibold uppercase tracking-wider group-hover:translate-x-1 transition-transform duration-200">
-                      View Profile →
-                    </p>
+                    {/* Content */}
+                    <div className="p-5 flex flex-col flex-1">
+                      <p className="text-white font-semibold mb-1">{member.name}</p>
+                      <p className="text-gold text-xs font-medium uppercase tracking-wider mb-3">
+                        {member.title}
+                      </p>
+                      <p className="text-gray-500 text-sm leading-relaxed flex-1 line-clamp-3">
+                        {member.shortBio}
+                      </p>
+                      <p className="mt-4 text-gold text-xs font-semibold uppercase tracking-wider group-hover:translate-x-1 transition-transform duration-200">
+                        View Profile →
+                      </p>
+                    </div>
                   </Link>
                 </motion.div>
               )
