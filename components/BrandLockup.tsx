@@ -10,7 +10,7 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
   return (
     <div
       className={`group/brand flex min-w-0 items-center ${
-        isFooter ? 'gap-4' : 'gap-3 sm:gap-3.5'
+        isFooter ? 'w-full flex-col justify-center gap-3 text-center sm:w-auto sm:flex-row sm:justify-start sm:gap-4 sm:text-left' : 'gap-3 sm:gap-3.5'
       }`}
       aria-label="Global Mercury Recovery and Water Security"
     >
@@ -31,7 +31,7 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
         />
       </div>
 
-      <div className="min-w-0 shrink">
+      <div className={`min-w-0 shrink ${isFooter ? 'flex max-w-full flex-col items-center sm:items-start' : ''}`}>
         {!isFooter && (
           <div className="block w-[9.5rem] sm:hidden" aria-hidden="true">
             <Image
@@ -57,19 +57,19 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
           width={3200}
           height={455}
           className={`object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)] ${
-            isFooter ? 'h-10 w-auto max-w-full' : 'hidden h-7 w-auto max-w-[11rem] sm:block sm:h-8 sm:max-w-none'
+            isFooter ? 'h-8 w-auto max-w-[14rem] object-center sm:h-10 sm:max-w-full sm:object-left' : 'hidden h-7 w-auto max-w-[11rem] sm:block sm:h-8 sm:max-w-none'
           }`}
           priority={!isFooter}
           aria-hidden="true"
         />
         <div
           className={`mt-1.5 font-sans font-semibold uppercase leading-tight tracking-[0.2em] text-white/75 ${
-            isFooter ? 'text-[0.68rem]' : 'hidden text-[0.62rem] sm:block'
+            isFooter ? 'flex max-w-full flex-col items-center gap-1 text-[0.58rem] tracking-[0.16em] sm:block sm:text-[0.68rem] sm:tracking-[0.2em]' : 'hidden text-[0.62rem] sm:block'
           }`}
         >
-          Mercury Recovery
-          <span className="mx-1.5 text-teal">|</span>
-          Water Security
+          <span className={isFooter ? 'whitespace-nowrap' : ''}>Mercury Recovery</span>
+          <span className={`${isFooter ? 'hidden sm:mx-1.5 sm:inline sm:text-teal' : 'mx-1.5 text-teal'}`}>|</span>
+          <span className={isFooter ? 'whitespace-nowrap text-teal sm:text-white/75' : ''}>Water Security</span>
         </div>
       </div>
     </div>

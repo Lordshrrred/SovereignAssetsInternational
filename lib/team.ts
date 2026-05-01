@@ -165,10 +165,27 @@ export const team: TeamMember[] = [
     slug: 'elvis-araya',
     headshot: null,
     shortBio:
-      'Elvis leads GMRWS\'s commercial operations and community engagement in Costa Rica, directing the Phase 1 pilot from relationship-building through field execution, translating the GMRWS platform into deployable reality on the ground.',
-    bio: ['Full profile coming soon.'],
-    credentials: [],
-    focus: ['Costa Rica Operations', 'Community Engagement', 'Phase 1 Pilot'],
+      'A lifelong Costa Rican entrepreneur, land steward, and real estate operator, Elvis brings decades of local trust, land rights experience, and direct commercial relationships to GMRWS\'s Costa Rica deployment.',
+    bio: [
+      'Elvis Araya has never worked for anyone else. From his earliest years in Costa Rica, he built his career on his own terms ~ buying, selling, and developing properties across one of the most ecologically significant landscapes on Earth.',
+      'Together with his brother, Elvis has been the steward of a substantial holding of primary virgin forest land in Costa Rica since 1990. That land has never been touched. Preserving it was not a business decision ~ it was a personal one. Today that same forest represents a significant carbon credit opportunity, and Elvis is positioned to bring it fully into the emerging environmental asset market.',
+      'His background in Costa Rican real estate spans decades of direct transaction experience, giving him a ground-level command of land rights, property development, and community relationships that no outside operator can replicate. He knows the land, the people, and the systems.',
+      'Over the last two years, Elvis has immersed himself in the global gold industry ~ tracing the full value chain from artisanal mines in Africa through to the trading markets in Dubai. That knowledge places him at the exact intersection where GMRWS operates: resource recovery, environmental remediation, and the global commodity flows that connect them.',
+      'As Chief Commercial Officer for Costa Rica, Elvis brings what cannot be imported ~ trust, tenure, and deep roots in the very ground this mission is built on.',
+    ],
+    credentials: [
+      'Costa Rican Real Estate Development',
+      'Land Rights & Property Transactions',
+      'Primary Forest Stewardship',
+      'Carbon Credit Market Positioning',
+      'Gold Value Chain Research',
+    ],
+    focus: [
+      'Costa Rica Operations',
+      'Commercial Relationships',
+      'Land Stewardship & Carbon Assets',
+      'Community Trust & Local Execution',
+    ],
   },
   {
     name: 'Christian Kelch',

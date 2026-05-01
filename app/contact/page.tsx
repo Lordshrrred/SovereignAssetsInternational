@@ -304,7 +304,9 @@ export default function ContactPage() {
             <p className="text-gray-400 text-lg font-display italic mb-2">
               "From Liability to Legacy."
             </p>
-            <p className="text-gray-600 text-sm">Global Mercury Removal & Water Security ~ GeoNano R&D LLC</p>
+            <p className="mx-auto max-w-[20rem] text-sm leading-relaxed text-gray-600 sm:max-w-none">
+              Global Mercury Removal & Water Security ~ GeoNano R&D LLC
+            </p>
           </div>
         </div>
       </section>

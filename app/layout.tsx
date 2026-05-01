@@ -1,15 +1,32 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import JsonLd from '@/components/JsonLd'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import {
+  createOrganizationJsonLd,
+  createWebSiteJsonLd,
+  defaultDescription,
+  defaultOgImage,
+  defaultOgImageAlt,
+  defaultOgImageHeight,
+  defaultOgImageWidth,
+  siteName,
+  siteUrl,
+} from '@/lib/seo'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'Global Mercury Recovery & Water Security | Environmental Remediation',
     template: '%s | GMRWS',
   },
-  description:
-    'Global Mercury Recovery & Water Security deploys a five-pillar platform for mercury remediation, primary water detection, soil regeneration, and village water infrastructure.',
+  description: defaultDescription,
+  applicationName: siteName,
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
+  category: 'Environmental remediation',
   keywords: [
     'mercury remediation',
     'soil regeneration',
@@ -26,6 +43,42 @@ export const metadata: Metadata = {
     ],
     apple: { url: '/favicon-180x180.png', sizes: '180x180', type: 'image/png' },
     shortcut: '/favicon.ico',
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Global Mercury Recovery & Water Security | Environmental Remediation',
+    description: defaultDescription,
+    url: siteUrl,
+    siteName,
+    type: 'website',
+    images: [
+      {
+        url: defaultOgImage,
+        secureUrl: defaultOgImage,
+        width: defaultOgImageWidth,
+        height: defaultOgImageHeight,
+        type: 'image/png',
+        alt: defaultOgImageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Global Mercury Recovery & Water Security | Environmental Remediation',
+    description: defaultDescription,
+    images: [defaultOgImage],
   },
 }
 
@@ -45,6 +98,8 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-navy text-white">
+        <JsonLd data={createOrganizationJsonLd()} />
+        <JsonLd data={createWebSiteJsonLd()} />
         <Nav />
         <main>{children}</main>
         <Footer />

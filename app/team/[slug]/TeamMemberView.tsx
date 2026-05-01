@@ -141,7 +141,9 @@ export default function TeamMemberView({ member }: { member: TeamMember }) {
       <section className="py-16 bg-navy border-t border-navy-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row gap-6 items-center justify-between">
           <div>
-            <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Global Mercury Removal &amp; Water Security</p>
+            <p className="max-w-[20rem] text-center text-xs uppercase leading-relaxed tracking-wider text-gray-500 sm:max-w-none sm:text-left">
+              Global Mercury Removal &amp; Water Security
+            </p>
             <p className="text-white font-semibold">Ready to connect?</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">

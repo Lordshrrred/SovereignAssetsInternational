@@ -19,6 +19,8 @@ const services = [
   { label: 'Hydrogeological Infrastructure', href: '/technology#pillar-E' },
 ]
 
+const serviceSummary = ['Mercury Remediation', 'Water Infrastructure', 'Land Regeneration', 'Soil Regeneration']
+
 export default function Footer() {
   return (
     <footer className="bg-navy-mid border-t border-navy-border">
@@ -80,14 +82,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-navy-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-600 text-xs">
+        <div className="mt-12 pt-8 border-t border-navy-border flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <p className="text-gray-600 text-xs leading-relaxed">
             &copy; {new Date().getFullYear()} GeoNano R&D LLC. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <span className="text-gray-700 text-xs tracking-wide">
-              Mercury Remediation | Water Infrastructure | Land Regeneration | Soil Regeneration
-            </span>
+          <div className="flex max-w-[20rem] flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-xs leading-relaxed tracking-wide text-gray-700 sm:max-w-none sm:justify-end sm:text-right">
+            {serviceSummary.map((item, index) => (
+              <span key={item} className="inline-flex items-center gap-x-2 whitespace-nowrap">
+                {index > 0 && <span className="text-gray-800" aria-hidden="true">|</span>}
+                <span>{item}</span>
+              </span>
+            ))}
           </div>
         </div>
       </div>
