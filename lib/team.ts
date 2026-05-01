@@ -5,6 +5,11 @@ export interface TeamMember {
   shortBio: string
   bio: string[]
   headshot: string | null
+  headshotFit?: {
+    scale?: number
+    transformOrigin?: string
+    objectPosition?: string
+  }
   credentials: string[]
   focus: string[]
 }
@@ -37,6 +42,7 @@ export const team: TeamMember[] = [
     title: 'Chief Executive Officer',
     slug: 'korrie-hayes',
     headshot: '/team/korrie-hayes.jpg',
+    headshotFit: { objectPosition: '50% 15%' },
     shortBio:
       'A decorated global commodity consultant and Knight of the Princely House of Schaumburg-Lippe-Nachod, Sir Korrie brings deep expertise in cross-border trade compliance, Kimberley Process certification, and intergovernmental diplomatic engagement to the GMRWS platform.',
     bio: [
@@ -90,6 +96,7 @@ export const team: TeamMember[] = [
     title: 'Chief Development Officer',
     slug: 'elizabeth-hayes',
     headshot: '/team/elizabeth-hayes.jpg',
+    headshotFit: { objectPosition: '50% 10%' },
     shortBio:
       'With over fourteen years in graphic design and logistics operations, including international freight exports and global brand development at Subterranean Trading LLC, Elizabeth brings operational precision and creative leadership to every dimension of GMRWS\'s development strategy.',
     bio: [
@@ -117,6 +124,7 @@ export const team: TeamMember[] = [
     title: 'Chief Technology Officer',
     slug: 'matt-dunn',
     headshot: '/team/matt-dunn.jpg',
+    headshotFit: { scale: 1.3, transformOrigin: '50% 0%' },
     shortBio:
       'A twenty-year builder of digital infrastructure and an early adopter of agentic AI, Matt architects the systems that make the GMRWS platform legible, scalable, and investor-ready, combining deep technical fluency with a track record of leading people and closing business in high-stakes environments.',
     bio: [

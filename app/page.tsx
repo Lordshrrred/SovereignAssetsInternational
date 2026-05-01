@@ -337,8 +337,12 @@ export default function Home() {
                             alt={member.name}
                             width={400}
                             height={400}
-                            className="w-full h-full object-cover object-top scale-[1.4] group-hover:scale-[1.5] transition-transform duration-500"
-                            style={{ transformOrigin: '50% 30%' }}
+                            className="w-full h-full object-cover transition-transform duration-500"
+                            style={{
+                              objectPosition: member.headshotFit?.objectPosition ?? '50% top',
+                              transform: member.headshotFit?.scale ? `scale(${member.headshotFit.scale})` : undefined,
+                              transformOrigin: member.headshotFit?.transformOrigin,
+                            }}
                           />
                         </div>
                       ) : (

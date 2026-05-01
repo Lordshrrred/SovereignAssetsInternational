@@ -50,8 +50,12 @@ export default function TeamMemberView({ member }: { member: TeamMember }) {
                     alt={member.name}
                     width={256}
                     height={256}
-                    className="w-full h-full object-cover object-top scale-[1.35]"
-                    style={{ transformOrigin: '50% 30%' }}
+                    className="w-full h-full object-cover"
+                    style={{
+                      objectPosition: member.headshotFit?.objectPosition ?? '50% top',
+                      transform: member.headshotFit?.scale ? `scale(${member.headshotFit.scale})` : undefined,
+                      transformOrigin: member.headshotFit?.transformOrigin,
+                    }}
                   />
                 </div>
               ) : (
