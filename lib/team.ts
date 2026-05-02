@@ -32,7 +32,7 @@ export const team: TeamMember[] = [
     title: 'Vice President',
     slug: 'eric-crowe',
     headshot: '/team/eric-crowe.jpg',
-    headshotFit: { scale: 1.62, transformOrigin: '50% 44%', objectPosition: '50% 40%' },
+    headshotFit: { scale: 1.62, transformOrigin: '66% 44%', objectPosition: '50% 40%' },
     shortBio:
       'A mission-driven fixer with an entrepreneur\'s hustle and an environmentalist\'s conscience, Eric brings over 50 years of hands-on experience in construction, hazardous materials compliance, infrastructure development, and mining operations to the GMRWS leadership team.',
     bio: [
