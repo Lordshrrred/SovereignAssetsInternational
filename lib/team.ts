@@ -20,7 +20,7 @@ export const team: TeamMember[] = [
     title: 'Founder / President',
     slug: 'clark',
     headshot: '/team/clark.jpg',
-    headshotFit: { objectPosition: '50% 20%' },
+    headshotFit: { scale: 1.5, transformOrigin: '53% 32%', objectPosition: '53% 26%' },
     shortBio:
       'The visionary founder behind the GMRWS platform, Clark has spent over two decades developing the field science and strategic frameworks that make planetary-scale mercury remediation possible.',
     bio: ['Full profile coming soon.'],
@@ -32,7 +32,7 @@ export const team: TeamMember[] = [
     title: 'Vice President',
     slug: 'eric-crowe',
     headshot: '/team/eric-crowe.jpg',
-    headshotFit: { objectPosition: '50% 35%' },
+    headshotFit: { scale: 1.62, transformOrigin: '56% 44%', objectPosition: '56% 40%' },
     shortBio:
       'A lifetime entrepreneur and environmental safety professional with over 50 years of hands-on experience in construction, hazardous materials compliance, infrastructure development, and mining operations, Eric brings credentialed field expertise and decades of complex project execution to the GMRWS leadership team.',
     bio: [
