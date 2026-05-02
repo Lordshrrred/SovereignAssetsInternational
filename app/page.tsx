@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { team } from '@/lib/team'
 import { fadeUpHero as fadeUp, stagger } from '@/lib/animations'
 
-const featuredSlugs = ['clark', 'korrie-hayes', 'mike-vallone', 'elizabeth-hayes', 'matt-dunn', 'elvis-araya']
+const featuredSlugs = ['clark', 'eric-crowe', 'korrie-hayes', 'elizabeth-hayes', 'matt-dunn', 'elvis-araya']
 
 const stats = [
   { value: '2026', label: 'Pilot Launch', sub: 'Costa Rica ~ Phase 1' },
