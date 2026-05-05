@@ -19,6 +19,8 @@ type SeoInput = {
 export function createPageMetadata({ title, description, path = '/', image }: SeoInput): Metadata {
   const url = new URL(path, siteUrl).toString()
   const imageUrl = new URL(image ?? defaultOgImage, siteUrl).toString()
+  const isDefaultImage = !image
+  const imageType = imageUrl.endsWith('.jpg') || imageUrl.endsWith('.jpeg') ? 'image/jpeg' : 'image/png'
 
   return {
     title,
@@ -51,9 +53,13 @@ export function createPageMetadata({ title, description, path = '/', image }: Se
         {
           url: imageUrl,
           secureUrl: imageUrl,
-          width: defaultOgImageWidth,
-          height: defaultOgImageHeight,
-          type: 'image/png',
+          ...(isDefaultImage
+            ? {
+                width: defaultOgImageWidth,
+                height: defaultOgImageHeight,
+              }
+            : {}),
+          type: imageType,
           alt: title,
         },
       ],
