@@ -345,9 +345,11 @@ export default function Home() {
                       <p className="text-white text-xs font-semibold leading-snug group-hover:text-gold transition-colors">
                         {member.name}
                       </p>
-                      <p className="text-gray-500 text-[0.65rem] uppercase tracking-wider mt-0.5 leading-tight">
-                        {member.title.replace(' ~ Costa Rica', '')}
-                      </p>
+                      {member.title && (
+                        <p className="text-gray-500 text-[0.65rem] uppercase tracking-wider mt-0.5 leading-tight">
+                          {member.title.replace(' ~ Costa Rica', '')}
+                        </p>
+                      )}
                     </Link>
                   </motion.div>
                 )

@@ -246,9 +246,11 @@ export default function AboutPage() {
                     {/* Content */}
                     <div className="p-5 flex flex-col flex-1">
                       <p className="text-white font-semibold mb-1">{member.name}</p>
-                      <p className="text-gold text-xs font-medium uppercase tracking-wider mb-3">
-                        {member.title}
-                      </p>
+                      {member.title && (
+                        <p className="text-gold text-xs font-medium uppercase tracking-wider mb-3">
+                          {member.title}
+                        </p>
+                      )}
                       <p className="text-gray-500 text-sm leading-relaxed flex-1 line-clamp-3">
                         {member.shortBio}
                       </p>

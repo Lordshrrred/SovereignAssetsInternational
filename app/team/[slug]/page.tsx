@@ -20,7 +20,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   }
 
   return createPageMetadata({
-    title: `${member.name} - ${member.title}`,
+    title: member.title ? `${member.name} - ${member.title}` : member.name,
     description: member.shortBio,
     path: `/team/${member.slug}`,
     image: member.headshot,
@@ -32,7 +32,7 @@ export default function TeamMemberPage({ params }: { params: { slug: string } })
   if (!member) notFound()
 
   const seo = {
-    title: `${member.name} - ${member.title}`,
+    title: member.title ? `${member.name} - ${member.title}` : member.name,
     description: member.shortBio,
     path: `/team/${member.slug}`,
     image: member.headshot,

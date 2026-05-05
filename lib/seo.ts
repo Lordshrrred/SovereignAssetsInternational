@@ -119,7 +119,7 @@ export function createPersonJsonLd({
   image,
 }: {
   name: string
-  title: string
+  title?: string
   description: string
   path: string
   image?: string | null
@@ -130,7 +130,7 @@ export function createPersonJsonLd({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name,
-    jobTitle: title,
+    ...(title ? { jobTitle: title } : {}),
     description,
     url,
     image: new URL(image ?? defaultOgImage, siteUrl).toString(),

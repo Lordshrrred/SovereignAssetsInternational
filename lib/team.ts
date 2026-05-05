@@ -1,6 +1,6 @@
 export interface TeamMember {
   name: string
-  title: string
+  title?: string
   slug: string
   shortBio: string
   bio: string[]
@@ -204,6 +204,35 @@ export const team: TeamMember[] = [
       'Commercial Relationships',
       'Land Stewardship & Carbon Assets',
       'Community Trust & Local Execution',
+    ],
+  },
+  {
+    name: 'Juan Chacon',
+    slug: 'juan-chacon',
+    headshot: '/team/juan-chacon.jpeg',
+    headshotFit: { scale: 1.18, transformOrigin: '52% 18%', objectPosition: '52% 18%' },
+    shortBio:
+      'A Costa Rican civil engineer, infrastructure executive, and project development specialist, Juan brings four decades of experience across energy, petroleum systems, public works, financing, and regional infrastructure delivery.',
+    bio: [
+      'Juan Ramon Chacon Calderon brings more than 40 years of professional experience across engineering, public infrastructure, business administration, and regional project development. His work spans planning, design, supervision, feasibility, basic and detailed engineering, programming, budgeting, bid preparation, construction management, risk management, financing, contract administration, and infrastructure project control for public and private organizations throughout Costa Rica, Mexico, and Central America.',
+      'Juan has held senior technical and management roles inside major Costa Rican state enterprises, including ICE in the electricity sector and RECOPE in the petroleum and energy infrastructure sector. His public-sector career included 21 years of technical, administrative, and executive responsibility, beginning as a civil engineer and progressing through institutional planning, project management, international trade, infrastructure development, and environmental review work connected to national-scale energy systems.',
+      'His regional project experience includes leadership on the Central American Electrical Interconnection System (SIEPAC), where he served in senior project and construction management capacities across Guatemala, Honduras, El Salvador, and Costa Rica. In that work he coordinated engineering, procurement, construction, contracts, subcontractors, budgets, cash flow, supplier relationships, legal support, human resources, insurance, guarantees, HSE procedures, and client-facing project administration for one of Central America\'s most significant power infrastructure programs.',
+      'Juan also brings deep experience in development finance and contract structuring, including negotiations and relationship management with national, regional, and international financial institutions such as Banco Nacional de Costa Rica, Banco de Costa Rica, the Central American Bank for Economic Integration, CAF, and the Inter-American Development Bank. His career includes contract consolidation with companies across Latin America, North America, Europe, and Asia.',
+      'Alongside his executive and engineering work, Juan has taught architecture and civil engineering at institutions including the University of Costa Rica, the Autonomous University of Central America, and the University College of Alajuela. He holds a civil engineering degree from the University of Costa Rica, graduate study in seismic-resistant engineering through UNAM, a master\'s degree in structures from the University of Costa Rica, and an MBA from the University of Science and Arts.',
+    ],
+    credentials: [
+      'Civil Engineering - University of Costa Rica',
+      'MSc Structures - University of Costa Rica',
+      'MBA - University of Science and Arts',
+      'Project Management & PMI-Endorsed Training',
+      'Energy Infrastructure & Public Works Delivery',
+      'Development Finance & Contract Negotiation',
+    ],
+    focus: [
+      'Infrastructure Project Development',
+      'Energy Systems & Public Works',
+      'Regional Contract Administration',
+      'Development Finance Coordination',
     ],
   },
   {

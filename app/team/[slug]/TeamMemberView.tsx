@@ -64,13 +64,15 @@ export default function TeamMemberView({ member }: { member: TeamMember }) {
             </motion.div>
 
             {/* Name / title */}
-            <motion.div initial="hidden" animate="show" variants={fadeUp}>
-              <p className="section-label">{member.title}</p>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-4">
+            <motion.div initial="hidden" animate="show" variants={fadeUp} className="min-w-0">
+              {member.title && <p className="section-label">{member.title}</p>}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-4 break-words">
                 {member.name}
               </h1>
               <div className="gold-line" />
-              <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">{member.shortBio}</p>
+              <p className="max-w-[22rem] break-words text-lg leading-relaxed text-gray-400 sm:max-w-2xl">
+                {member.shortBio}
+              </p>
 
               {/* Focus areas */}
               {member.focus.length > 0 && (
@@ -78,7 +80,7 @@ export default function TeamMemberView({ member }: { member: TeamMember }) {
                   {member.focus.map((f) => (
                     <span
                       key={f}
-                      className="px-3 py-1 bg-teal/10 border border-teal/20 text-teal text-xs font-medium uppercase tracking-wider rounded-sm"
+                      className="max-w-full break-words px-3 py-1 bg-teal/10 border border-teal/20 text-teal text-xs font-medium uppercase tracking-wider rounded-sm"
                     >
                       {f}
                     </span>
