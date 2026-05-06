@@ -7,10 +7,6 @@ import {
   createOrganizationJsonLd,
   createWebSiteJsonLd,
   defaultDescription,
-  defaultOgImage,
-  defaultOgImageAlt,
-  defaultOgImageHeight,
-  defaultOgImageWidth,
   siteName,
   siteUrl,
 } from '@/lib/seo'
@@ -35,15 +31,6 @@ export const metadata: Metadata = {
     'artisanal mining',
     'water security',
   ],
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
-    ],
-    apple: { url: '/favicon-180x180.png', sizes: '180x180', type: 'image/png' },
-    shortcut: '/favicon.ico',
-  },
   alternates: {
     canonical: siteUrl,
   },
@@ -63,22 +50,11 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName,
     type: 'website',
-    images: [
-      {
-        url: defaultOgImage,
-        secureUrl: defaultOgImage,
-        width: defaultOgImageWidth,
-        height: defaultOgImageHeight,
-        type: 'image/png',
-        alt: defaultOgImageAlt,
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Global Mercury Recovery & Water Security | Environmental Remediation',
     description: defaultDescription,
-    images: [defaultOgImage],
   },
 }
 

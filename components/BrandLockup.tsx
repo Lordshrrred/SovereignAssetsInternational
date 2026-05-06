@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 type BrandLockupProps = {
   context?: 'nav' | 'footer'
 }
@@ -10,66 +8,24 @@ export default function BrandLockup({ context = 'nav' }: BrandLockupProps) {
   return (
     <div
       className={`group/brand flex min-w-0 items-center ${
-        isFooter ? 'w-full flex-col justify-center gap-3 text-center sm:w-auto sm:flex-row sm:justify-start sm:gap-4 sm:text-left' : 'gap-3 sm:gap-3.5'
+        isFooter ? 'w-full flex-col justify-center gap-2 text-center sm:w-auto sm:items-start sm:text-left' : ''
       }`}
       aria-label="Global Mercury Recovery and Water Security"
     >
-      <div
-        className={`relative shrink-0 overflow-visible ${
-          isFooter ? 'h-14 w-14' : 'h-10 w-10 sm:h-11 sm:w-11'
-        }`}
-        aria-hidden="true"
-      >
-        <div className="absolute inset-[-5px] rounded-full bg-teal/10 blur-md opacity-0 transition-opacity duration-300 group-hover/brand:opacity-100" />
-        <Image
-          src="/brand/icon-white.png"
-          alt=""
-          width={112}
-          height={120}
-          className="relative h-full w-full object-contain opacity-95 drop-shadow-[0_0_18px_rgba(0,212,170,0.16)] transition-opacity duration-300 group-hover/brand:opacity-100"
-          priority={!isFooter}
-        />
-      </div>
-
       <div className={`min-w-0 shrink ${isFooter ? 'flex max-w-full flex-col items-center sm:items-start' : ''}`}>
-        {!isFooter && (
-          <div className="block w-[9.5rem] sm:hidden" aria-hidden="true">
-            <Image
-              src="/brand/global-wordmark-white.png"
-              alt=""
-              width={3200}
-              height={455}
-              className="h-5 w-auto max-w-full object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)]"
-              priority
-              aria-hidden="true"
-            />
-            <div className="mt-1.5 font-sans text-[0.58rem] font-semibold uppercase leading-none tracking-[0.17em] text-white/80">
-              Mercury Recovery
-            </div>
-            <div className="mt-1 font-sans text-[0.58rem] font-semibold uppercase leading-none tracking-[0.18em] text-teal">
-              Water Security
-            </div>
-          </div>
-        )}
-        <Image
-          src="/brand/global-wordmark-white.png"
-          alt=""
-          width={3200}
-          height={455}
-          className={`object-contain object-left opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.14)] [filter:brightness(1.08)_contrast(1.08)] ${
-            isFooter ? 'h-8 w-auto max-w-[14rem] object-center sm:h-10 sm:max-w-full sm:object-left' : 'hidden h-7 w-auto max-w-[11rem] sm:block sm:h-8 sm:max-w-none'
-          }`}
-          priority={!isFooter}
-          aria-hidden="true"
-        />
         <div
-          className={`mt-1.5 font-sans font-semibold uppercase leading-tight tracking-[0.2em] text-white/75 ${
-            isFooter ? 'flex max-w-full flex-col items-center gap-1 text-[0.58rem] tracking-[0.16em] sm:block sm:text-[0.68rem] sm:tracking-[0.2em]' : 'hidden text-[0.62rem] sm:block'
+          className={`font-sans font-semibold uppercase leading-none text-white transition-colors duration-300 group-hover/brand:text-gold ${
+            isFooter ? 'text-lg tracking-[0.18em] sm:text-xl' : 'text-[0.95rem] tracking-[0.16em] sm:text-lg sm:tracking-[0.2em]'
           }`}
         >
-          <span className={isFooter ? 'whitespace-nowrap' : ''}>Mercury Recovery</span>
-          <span className={`${isFooter ? 'hidden sm:mx-1.5 sm:inline sm:text-teal' : 'mx-1.5 text-teal'}`}>|</span>
-          <span className={isFooter ? 'whitespace-nowrap text-teal sm:text-white/75' : ''}>Water Security</span>
+          Global Mercury Recovery
+        </div>
+        <div
+          className={`mt-1.5 font-sans font-semibold uppercase leading-tight text-teal ${
+            isFooter ? 'text-[0.65rem] tracking-[0.2em] sm:text-xs' : 'text-[0.56rem] tracking-[0.19em] sm:text-[0.65rem] sm:tracking-[0.24em]'
+          }`}
+        >
+          Water Security
         </div>
       </div>
     </div>

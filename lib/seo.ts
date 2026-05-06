@@ -4,10 +4,6 @@ export const siteUrl = 'https://globalmercuryrecovery.com'
 export const siteName = 'Global Mercury Recovery & Water Security'
 export const defaultDescription =
   'Global Mercury Recovery & Water Security deploys a five-pillar platform for mercury remediation, primary water detection, soil regeneration, and village water infrastructure.'
-export const defaultOgImage = '/brand/logo-horizontal-full-color.png'
-export const defaultOgImageAlt = `${siteName} logo`
-export const defaultOgImageWidth = 4096
-export const defaultOgImageHeight = 1037
 
 type SeoInput = {
   title: string
@@ -18,9 +14,8 @@ type SeoInput = {
 
 export function createPageMetadata({ title, description, path = '/', image }: SeoInput): Metadata {
   const url = new URL(path, siteUrl).toString()
-  const imageUrl = new URL(image ?? defaultOgImage, siteUrl).toString()
-  const isDefaultImage = !image
-  const imageType = imageUrl.endsWith('.jpg') || imageUrl.endsWith('.jpeg') ? 'image/jpeg' : 'image/png'
+  const imageUrl = image ? new URL(image, siteUrl).toString() : null
+  const imageType = imageUrl?.endsWith('.jpg') || imageUrl?.endsWith('.jpeg') ? 'image/jpeg' : 'image/png'
 
   return {
     title,
@@ -49,26 +44,24 @@ export function createPageMetadata({ title, description, path = '/', image }: Se
       url,
       siteName,
       type: 'website',
-      images: [
-        {
-          url: imageUrl,
-          secureUrl: imageUrl,
-          ...(isDefaultImage
-            ? {
-                width: defaultOgImageWidth,
-                height: defaultOgImageHeight,
-              }
-            : {}),
-          type: imageType,
-          alt: title,
-        },
-      ],
+      ...(imageUrl
+        ? {
+            images: [
+              {
+                url: imageUrl,
+                secureUrl: imageUrl,
+                type: imageType,
+                alt: title,
+              },
+            ],
+          }
+        : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [imageUrl],
+      ...(imageUrl ? { images: [imageUrl] } : {}),
     },
   }
 }
@@ -79,7 +72,6 @@ export function createOrganizationJsonLd() {
     '@type': 'Organization',
     name: siteName,
     url: siteUrl,
-    logo: new URL(defaultOgImage, siteUrl).toString(),
     description: defaultDescription,
     legalName: 'GeoNano R&D LLC',
   }
@@ -108,12 +100,6 @@ export function createWebPageJsonLd({ title, description, path = '/' }: SeoInput
     url,
     isPartOf: createWebSiteJsonLd(),
     publisher: createOrganizationJsonLd(),
-    primaryImageOfPage: {
-      '@type': 'ImageObject',
-      url: new URL(defaultOgImage, siteUrl).toString(),
-      width: defaultOgImageWidth,
-      height: defaultOgImageHeight,
-    },
   }
 }
 
@@ -139,7 +125,7 @@ export function createPersonJsonLd({
     ...(title ? { jobTitle: title } : {}),
     description,
     url,
-    image: new URL(image ?? defaultOgImage, siteUrl).toString(),
+    ...(image ? { image: new URL(image, siteUrl).toString() } : {}),
     worksFor: createOrganizationJsonLd(),
   }
 }

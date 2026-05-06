@@ -84,27 +84,13 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-20 sm:pt-44 sm:pb-32">
           <motion.div variants={stagger} initial="hidden" animate="show" className="space-y-5 sm:space-y-8">
-            <motion.div variants={fadeUp} className="flex justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-2xl scale-150" />
-                <Image
-                  src="/brand/icon-white.png"
-                  alt="Global Mercury Recovery & Water Security"
-                  width={96}
-                  height={96}
-                  className="relative h-14 w-auto opacity-90 sm:h-20"
-                  priority
-                />
-              </div>
-            </motion.div>
-
             <motion.p variants={fadeUp} className="section-label mx-auto max-w-[18rem] text-[0.65rem] leading-relaxed tracking-[0.16em] sm:max-w-none sm:text-xs sm:tracking-[0.2em]">
               Global Environmental Remediation Platform
             </motion.p>
 
             <motion.h1
               variants={fadeUp}
-              className="mx-auto max-w-[19.5rem] text-[2rem] font-display font-bold leading-[1.08] text-white sm:max-w-3xl sm:text-5xl md:text-6xl lg:max-w-5xl lg:text-7xl"
+              className="mx-auto max-w-[18rem] text-[1.75rem] font-display font-bold leading-[1.08] text-white sm:max-w-3xl sm:text-5xl md:text-6xl lg:max-w-5xl lg:text-7xl"
             >
               Transforming Environmental{' '}
               <span className="text-gradient-gold">Liabilities</span> Into{' '}

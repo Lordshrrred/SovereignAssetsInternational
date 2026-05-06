@@ -42,16 +42,6 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="pt-44 pb-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-20%,rgba(201,168,76,0.06),transparent)]" />
-        <div className="absolute top-20 right-8 lg:right-24 opacity-[0.06] pointer-events-none select-none">
-          <Image
-            src="/brand/icon-white.png"
-            alt=""
-            width={320}
-            height={320}
-            className="w-64 lg:w-80 h-auto"
-            aria-hidden="true"
-          />
-        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" animate="show" variants={fadeUp} className="max-w-3xl">
             <p className="section-label">Who We Are</p>
